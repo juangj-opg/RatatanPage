@@ -11,9 +11,9 @@ import { SkillSlot } from '../../../models/SkillSlot';
 })
 export class SkilsComponent {
   selectedRarity = 3;
-  selectedElement = 4;
+  selectedElement = 5;
 
-  selectedCard: number = 42;
+  selectedCard: number = 52;
 
   elements: Element[] = [
     { name: 'Fuego', srcImg: 'AttributeIcon_PC000_Fire.png' },
@@ -315,6 +315,61 @@ export class SkilsComponent {
           elementType: 'thunder',
           title: 'Autocarga',
           srcImg: 'icn_ratacarta05_thunder_510m.png',
+        },
+      ],
+    },
+    // Viento
+    {
+      skills: [
+        {
+          elementType: 'wind',
+          title: 'Golpe Remolino+',
+          srcImg: 'icn_ratacarta07_wind_701m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Golpe Remolino Especial+',
+          srcImg: 'icn_ratacarta07_wind_702m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Huracán Infernal',
+          srcImg: 'icn_ratacarta07_wind_703m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Huracán Demoníaco',
+          srcImg: 'icn_ratacarta07_wind_704m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Combo Huracán',
+          srcImg: 'icn_ratacarta07_wind_705m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Tornado Torbellino+',
+          srcImg: 'icn_ratacarta07_wind_706m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Mega Vendaval',
+          srcImg: 'icn_ratacarta07_wind_707m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Boss Buster*',
+          srcImg: 'icn_ratacarta07_wind_708m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Reembolso de la Suerte',
+          srcImg: 'icn_ratacarta07_wind_709m.png',
+        },
+        {
+          elementType: 'wind',
+          title: 'Ka-ching Crítico',
+          srcImg: 'icn_ratacarta07_wind_710m.png',
         },
       ],
     },
@@ -720,7 +775,7 @@ export class SkilsComponent {
     },
     {
       title: 'Zap Extra',
-      desc: 'El daño de Parálisis se activa {0} vez/veces mientras el enemigo esté Paralizado',
+      desc: 'El daño de Parálisis se activa {0} veces mientras el enemigo esté Paralizado',
       element: 'Thunder',
       rarityLvl: [2, 3],
       variableLvl: [1, 2],
@@ -741,6 +796,87 @@ export class SkilsComponent {
       rarityLvl: [1, 2, 3],
       variableLvl: [4, 3, 1.5],
       srcImg: 'icn_ratacarta05_thunder_510.png',
+    },
+    // Viento
+    {
+      title: 'Golpe Remolino+',
+      desc: 'Ataques Normales tienen un +{0}% de chance de ser críticos.',
+      element: 'Wind',
+      rarityLvl: [0, 1, 2, 3],
+      variableLvl: [40, 50, 60, 70],
+      srcImg: 'icn_ratacarta07_wind_701.png',
+    },
+    {
+      title: 'Golpe Remolino Especial+',
+      desc: 'Técnicas Especiales tienen un +{0}% de chance de ser críticos.',
+      element: 'Wind',
+      rarityLvl: [0, 1, 2, 3],
+      variableLvl: [40, 50, 60, 70],
+      srcImg: 'icn_ratacarta07_wind_702.png',
+    },
+    {
+      title: 'Huracán Infernal',
+      desc: 'Los Cobun dejan de moverse al atacar pero ganan {0}% más de daño crítico.',
+      element: 'Wind',
+      rarityLvl: [1, 2, 3],
+      variableLvl: [50, 75, 100],
+      srcImg: 'icn_ratacarta07_wind_703.png',
+    },
+    {
+      title: 'Huracán Demoníaco',
+      desc: 'Golpes críticos causan +{0}% de daño extremo si los PS enemigos están bajo cierto nivel.',
+      element: 'Wind',
+      rarityLvl: [0, 1, 2, 3],
+      variableLvl: [50, 100, 150, 200],
+      srcImg: 'icn_ratacarta07_wind_704.png',
+    },
+    {
+      title: 'Combo Huracán',
+      desc: 'Golpes críticos infligen +{0}% de daño y empuje.',
+      element: 'Wind',
+      rarityLvl: [0, 1, 2, 3],
+      variableLvl: [30, 60, 90, 120],
+      srcImg: 'icn_ratacarta07_wind_705.png',
+    },
+    {
+      title: 'Tornado Torbellino+',
+      desc: '{0} tornados aparecen cuando se usa la Fuerza Elemental de Viento.',
+      element: 'Wind',
+      rarityLvl: [2, 3],
+      variableLvl: [1, 2],
+      srcImg: 'icn_ratacarta07_wind_706.png',
+    },
+    {
+      title: 'Mega Vendaval',
+      desc: 'Enemigos empujados reciben +{0}% de de daño extremo si los PS enemigos están bajo cierto nivel.',
+      element: 'Wind',
+      rarityLvl: [0, 1, 2, 3],
+      variableLvl: [50, 100, 150, 200],
+      srcImg: 'icn_ratacarta07_wind_707.png',
+    },
+    {
+      title: 'Boss Buster*',
+      desc: 'El daño crítico sube un {0}% por cada boss derrotado (máximo 100%).',
+      element: 'Wind',
+      rarityLvl: [2, 3],
+      variableLvl: [5, 10],
+      srcImg: 'icn_ratacarta07_wind_708.png',
+    },
+    {
+      title: 'Reembolso de la Suerte',
+      desc: '{0}% de chance de recibir algo de dinero de vuelta al comprar objeto de la Tienda.',
+      element: 'Wind',
+      rarityLvl: [0, 1, 2, 3],
+      variableLvl: [10, 20, 30, 50],
+      srcImg: 'icn_ratacarta07_wind_709.png',
+    },
+    {
+      title: 'Ka-ching Crítico',
+      desc: 'Gana +{0} tokens cuando derrotas enemigos con ataques críticos.',
+      element: 'Wind',
+      rarityLvl: [1, 2, 3],
+      variableLvl: [5, 7, 10],
+      srcImg: 'icn_ratacarta07_wind_710.png',
     },
   ];
 
