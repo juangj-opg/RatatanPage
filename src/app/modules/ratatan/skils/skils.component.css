@@ -1,0 +1,162 @@
+/* Diseño barra elementos */
+
+div#elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* FIN Diseño barra elementos */
+
+/* Diseño skills */
+
+div#skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div#skills img {
+  margin: 0 5px;
+  width: 120px;
+}
+
+/* FIN Diseño skills*/
+
+/* Diseño rarezas*/
+
+div#rarities {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div#rarities .rarity {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+div#rarities > .common {
+  background-color: rgba(171, 171, 171, 1);
+}
+div#rarities > .rare {
+  background-color: rgba(75, 163, 219, 1);
+}
+div#rarities > .epic {
+  background-color: rgba(201, 87, 203, 1);
+}
+div#rarities > .legendary {
+  background-color: rgba(241, 236, 89, 1);
+}
+/* FIN Diseño rarezas*/
+
+/* Diseño cartas */
+
+div#cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+div#cards .card {
+  position: relative;
+  width: 400px;
+  aspect-ratio: 3/5;
+  margin-left: 10px;
+}
+
+div#cards .overlay {
+  position: absolute;
+  z-index: 6;
+  object-fit: cover;
+  width: 100%;
+  left: -1%;
+}
+
+div#cards .titleCard,
+div#cards .descCard {
+  position: absolute;
+  z-index: 6;
+  color: white;
+  font-weight: bold;
+}
+
+div#cards .titleCard {
+  top: 6.2%;
+  left: 32%;
+  right: 7%;
+  font-family: "titleCard", sans-serif;
+  font-size: 21px;
+  height: 50px;
+  width: 235px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+div#cards .descCard {
+  top: 55.8%;
+  left: 17%;
+  right: 8%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+div#cards .frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  object-fit: cover;
+}
+
+div#cards .skill-container {
+  position: absolute;
+  top: 16%;
+  left: 14%;
+  width: 82%;
+  height: 40%;
+  z-index: 4;
+}
+
+div#cards .skill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+div#cards .skill-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.7));
+  z-index: 2;
+  pointer-events: none;
+}
+
+div#cards .skill-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* FIN Diseño cartas */

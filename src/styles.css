@@ -1,0 +1,108 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Fuentes */
+
+/* Fuente principal del juego (títulos) */
+@font-face {
+  font-family: "RatatanIngame";
+  src: url("/fonts/RatatanIngameFont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Fuente redondeada (UI, probablemente descripciones) */
+@font-face {
+  font-family: "MPLUSRounded";
+  src: url("/fonts/MPLUSRounded1c-Black.ttf") format("truetype");
+  font-weight: 900; /* es versión Black */
+  font-style: normal;
+}
+
+/* Noto Sans variantes (soporte multi-idioma KR/SC/TC) */
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("/fonts/NotoSansKR-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSansSC";
+  src: url("/fonts/NotoSansSC-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "titleCard";
+  src: url("/fonts/kenyan-coffee-rg.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NotoSansTC";
+  src: url("/fonts/NotoSansTC-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Pixel font retro */
+@font-face {
+  font-family: "PerfectDOS";
+  src: url("/fonts/PerfectDOSVGA437.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FIN Fuentes */
+
+/* Diseño general de la página */
+
+#contentDiv {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#contentPage {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* FIN - Diseño general de la página*/
+
+/* Cabecera */
+
+div#cabecera {
+  width: 100%;
+}
+
+div#contentCabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+/* Fin Cabecera */

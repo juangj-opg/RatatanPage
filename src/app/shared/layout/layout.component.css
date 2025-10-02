@@ -1,0 +1,4 @@
+div#contentPage {
+  background-color: rgba(220, 120, 120, 0.5); /* TODO: Quitar este atributo */
+  width: 100%;
+}

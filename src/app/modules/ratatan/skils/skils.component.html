@@ -1,0 +1,73 @@
+<div id="elements">
+  <div
+    id="element"
+    *ngFor="let element of elements; let i = index"
+    (click)="selectedElement = i"
+  >
+    <img src="/images/elements/{{ element.srcImg }}" alt="{{ element.name }}" />
+  </div>
+</div>
+
+<div id="skills">
+  <div
+    class="skill"
+    *ngFor="let skill of skills[selectedElement].skills"
+    (click)="selectSkill(skill)"
+  >
+    <img
+      src="/images/skills/{{ skill.elementType }}/{{ skill.srcImg }}"
+      alt="{{ skill.title }}"
+    />
+  </div>
+</div>
+
+<div id="rarities">
+  <div
+    class="rarity"
+    *ngFor="let rarity of cards[selectedCard].rarityLvl"
+    (click)="selectedRarity = rarity"
+    [ngClass]="{
+      common: rarity == 0,
+      rare: rarity == 1,
+      epic: rarity == 2,
+      legendary: rarity == 3
+    }"
+  ></div>
+</div>
+
+<div id="cards">
+  <div class="card">
+    <img
+      src="/images/frames/RatakarutaCardFrameLv{{
+        cards[selectedCard].rarityLvl[
+          getRarityIndex(cards[selectedCard], selectedRarity)
+        ]
+      }}.png"
+      class="frame"
+    />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{
+        cards[selectedCard].element
+      }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        src="/images/skills/{{ cards[selectedCard].element.toLowerCase() }}/{{
+          cards[selectedCard].srcImg
+        }}"
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{ cards[selectedCard].title }}</span>
+
+    <span class="descCard">{{
+      cards[selectedCard].desc.replace(
+        "{0}",
+        cards[selectedCard].variableLvl[
+          getRarityIndex(cards[selectedCard], selectedRarity)
+        ].toString()
+      )
+    }}</span>
+  </div>
+</div>
