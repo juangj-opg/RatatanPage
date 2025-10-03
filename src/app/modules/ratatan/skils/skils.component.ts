@@ -348,7 +348,7 @@ export class SkilsComponent {
         },
         {
           elementType: 'wind',
-          title: 'Tornado Torbellino+',
+          title: 'Tornado Demoledor+',
           srcImg: 'icn_ratacarta07_wind_706m.png',
         },
         {
@@ -839,7 +839,7 @@ export class SkilsComponent {
       srcImg: 'icn_ratacarta07_wind_705.png',
     },
     {
-      title: 'Tornado Torbellino+',
+      title: 'Tornado Demoledor+',
       desc: '{0} tornados aparecen cuando se usa la Fuerza Elemental de Viento.',
       element: 'Wind',
       rarityLvl: [2, 3],
