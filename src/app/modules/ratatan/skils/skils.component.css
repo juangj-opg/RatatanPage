@@ -163,14 +163,14 @@ div#cards .skill-container::after {
 /* Diseño Icono desplegable  */
 
 div#iconDesplegable {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0%;
   z-index: 20;
 }
 
 div#iconDesplegable img {
-  width: 120px;
+  width: 100px;
 }
 
 /* TODO: Hacer la carta más pequeña y centrada a la hora de ponerlo en versión móvil */
@@ -252,8 +252,8 @@ div#skillsMobile .skill {
   color: white;
   font-family: "titleCard", sans-serif;
   margin: 0px 10px;
-  margin-bottom: 10px;
-  width: 100%;
+  margin-bottom: 15px;
+  width: 94%;
 }
 
 div#skillsMobile span {
@@ -275,7 +275,7 @@ div#skillsMobile .skillTitleMobile {
 
 /* Diseño Responsive */
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 720px) {
   div#elements,
   div#skills,
   div#rarities {
