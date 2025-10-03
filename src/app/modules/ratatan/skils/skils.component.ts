@@ -895,16 +895,11 @@ export class SkilsComponent {
   }
 
   advanceRarity(card: Card) {
-    console.log(this.selectedRarity);
-    console.log(card.rarityLvl);
     let indexActual =
       card.rarityLvl.findIndex((rarity) => rarity == this.selectedRarity) >= 0
         ? card.rarityLvl.findIndex((rarity) => rarity == this.selectedRarity)
         : 0;
 
-    console.log(indexActual);
-    console.log(card.rarityLvl[indexActual + 1] == undefined);
-    console.log(card.rarityLvl[0])
     if (card.rarityLvl[indexActual + 1] == undefined)
       this.selectedRarity = card.rarityLvl[0];
     else this.selectedRarity++;

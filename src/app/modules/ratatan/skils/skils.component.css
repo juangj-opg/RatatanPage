@@ -163,6 +163,7 @@ div#cards .skill-container::after {
 /* Diseño Icono desplegable  */
 
 div#iconDesplegable {
+  display: none;
   position: fixed;
   bottom: 0;
   right: 0%;
@@ -173,8 +174,6 @@ div#iconDesplegable img {
   width: 100px;
 }
 
-/* TODO: Hacer la carta más pequeña y centrada a la hora de ponerlo en versión móvil */
-
 .sidenav {
   height: 100%;
   width: 100%;
@@ -182,7 +181,7 @@ div#iconDesplegable img {
   z-index: 1;
   top: 0;
   left: 100%;
-  background-color: rgba(14,14,14,0.94);
+  background-color: rgba(14, 14, 14, 0.94);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -275,11 +274,22 @@ div#skillsMobile .skillTitleMobile {
 
 /* Diseño Responsive */
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 665px) {
+  div#elementsMobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
   div#elements,
   div#skills,
   div#rarities {
     display: none;
+  }
+
+  div#iconDesplegable {
+    display: block;
   }
 }
 

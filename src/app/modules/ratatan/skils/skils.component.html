@@ -19,22 +19,7 @@
       alt="{{ skill.title }}"
     />
   </div>
-</div>
-
-<div id="rarities">
-  <div
-    class="rarity"
-    *ngFor="let rarity of cards[selectedCard].rarityLvl"
-    (click)="selectedRarity = rarity"
-    [ngClass]="{
-      common: rarity == 0,
-      rare: rarity == 1,
-      epic: rarity == 2,
-      legendary: rarity == 3
-    }"
-  ></div>
-</div>
-
+</div> 
 <div id="cards">
   <div class="card" (click)="advanceRarity(cards[selectedCard])">
     <img
