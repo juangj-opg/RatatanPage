@@ -74,7 +74,7 @@
 
 <div
   id="iconDesplegable"
-  onclick="document.getElementById('mySidenav').style.width = '100%';"
+  onclick="document.getElementById('mySidenav').style.left = '0%';"
 >
   <img src="/images/frames/ratakaruta.png" />
 </div>
@@ -83,7 +83,7 @@
   <a
     href="javascript:void(0)"
     class="closebtn"
-    onclick="document.getElementById('mySidenav').style.width = '0%';"
+    onclick="document.getElementById('mySidenav').style.left = '100%';"
     >&times;</a
   >
   <div id="elementsMobile">
@@ -104,6 +104,7 @@
       class="skill"
       *ngFor="let skill of skills[selectedElement].skills"
       (click)="selectSkill(skill)"
+      onclick="document.getElementById('mySidenav').style.left = '100%';"
     >
       <img
         src="/images/skills/{{ skill.elementType }}/{{ skill.srcImg }}"

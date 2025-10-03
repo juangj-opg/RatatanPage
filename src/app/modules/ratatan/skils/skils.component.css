@@ -68,7 +68,6 @@ div#cards .card {
   position: relative;
   width: 400px;
   aspect-ratio: 3/5;
-  margin-left: 10px;
 }
 
 div#cards .overlay {
@@ -178,12 +177,12 @@ div#iconDesplegable img {
 
 .sidenav {
   height: 100%;
-  width: 0%;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
-  background-color: #111;
+  left: 100%;
+  background-color: rgba(14,14,14,0.94);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -273,3 +272,15 @@ div#skillsMobile .skillTitleMobile {
 }
 
 /* Fin Diseño Icono desplegable  */
+
+/* Diseño Responsive */
+
+@media only screen and (max-width: 576px) {
+  div#elements,
+  div#skills,
+  div#rarities {
+    display: none;
+  }
+}
+
+/* Fin Diseño Responsive*/
