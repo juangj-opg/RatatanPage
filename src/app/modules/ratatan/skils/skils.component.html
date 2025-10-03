@@ -1,6 +1,6 @@
 <div id="elements">
   <div
-    id="element"
+    class="element"
     *ngFor="let element of elements; let i = index"
     (click)="selectedElement = i"
   >
@@ -69,5 +69,49 @@
         ].toString()
       )
     }}</span>
+  </div>
+</div>
+
+<div
+  id="iconDesplegable"
+  onclick="document.getElementById('mySidenav').style.width = '100%';"
+>
+  <img src="/images/frames/ratakaruta.png" />
+</div>
+
+<div id="mySidenav" class="sidenav">
+  <a
+    href="javascript:void(0)"
+    class="closebtn"
+    onclick="document.getElementById('mySidenav').style.width = '0%';"
+    >&times;</a
+  >
+  <div id="elementsMobile">
+    <div
+      class="element"
+      *ngFor="let element of elements; let i = index"
+      (click)="selectedElement = i"
+    >
+      <img
+        src="/images/elements/{{ element.srcImg }}"
+        alt="{{ element.name }}"
+      />
+    </div>
+  </div>
+
+  <div id="skillsMobile">
+    <div
+      class="skill"
+      *ngFor="let skill of skills[selectedElement].skills"
+      (click)="selectSkill(skill)"
+    >
+      <img
+        src="/images/skills/{{ skill.elementType }}/{{ skill.srcImg }}"
+        alt="{{ skill.title }}"
+      />
+      <div class="skillTitleMobile">
+        <span>{{ skill.title }}</span>
+      </div>
+    </div>
   </div>
 </div>

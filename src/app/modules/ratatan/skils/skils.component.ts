@@ -11,9 +11,8 @@ import { SkillSlot } from '../../../models/SkillSlot';
 })
 export class SkilsComponent {
   selectedRarity = 3;
-  selectedElement = 5;
-
-  selectedCard: number = 52;
+  selectedElement = 0;
+  selectedCard: number = 0;
 
   elements: Element[] = [
     { name: 'Fuego', srcImg: 'AttributeIcon_PC000_Fire.png' },
@@ -202,7 +201,7 @@ export class SkilsComponent {
         },
 
         {
-          title: 'Minueto Macho*',
+          title: 'Minueto Macho',
           elementType: 'ice',
           srcImg: 'icn_ratacarta03_ice_310m.png',
         },
@@ -303,7 +302,7 @@ export class SkilsComponent {
         },
         {
           elementType: 'thunder',
-          title: 'Zap Extra',
+          title: 'Descarga Extra*',
           srcImg: 'icn_ratacarta05_thunder_508m.png',
         },
         {
@@ -358,7 +357,7 @@ export class SkilsComponent {
         },
         {
           elementType: 'wind',
-          title: 'Boss Buster*',
+          title: 'Destructor de Jefes',
           srcImg: 'icn_ratacarta07_wind_708m.png',
         },
         {
@@ -628,7 +627,7 @@ export class SkilsComponent {
       srcImg: 'icn_ratacarta03_ice_309.png',
     },
     {
-      title: 'Minueto Macho*',
+      title: 'Minueto Macho',
       desc: 'La vida máxima sube {0} puntos por cada boss derrotado.',
       element: 'Ice',
       rarityLvl: [2, 3],
@@ -774,7 +773,7 @@ export class SkilsComponent {
       srcImg: 'icn_ratacarta05_thunder_507.png',
     },
     {
-      title: 'Zap Extra',
+      title: 'Descarga Extra*',
       desc: 'El daño de Parálisis se activa {0} veces mientras el enemigo esté Paralizado',
       element: 'Thunder',
       rarityLvl: [2, 3],
@@ -855,7 +854,7 @@ export class SkilsComponent {
       srcImg: 'icn_ratacarta07_wind_707.png',
     },
     {
-      title: 'Boss Buster*',
+      title: 'Destructor de Jefes',
       desc: 'El daño crítico sube un {0}% por cada boss derrotado (máximo 100%).',
       element: 'Wind',
       rarityLvl: [2, 3],
