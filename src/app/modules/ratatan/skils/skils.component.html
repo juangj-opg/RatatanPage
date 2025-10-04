@@ -86,49 +86,50 @@
       }}
     </span>
   </div>
-  <div
-  class="cardInfo"
-  id="principalCard"
-  (click)="advanceRarity(getCard('actual')!)"
->
-  <img
-    src="/images/frames/RatakarutaCardFrameLv{{
-      getRarityLvlCard(getCard('actual')!)
-    }}.png"
-    class="frame"
-  />
-  <img
-    src="/images/frames/RatakarutaCardFrame_{{
-      getCard('actual')?.element
-    }}.png"
-    class="overlay"
-  />
-  <div class="skill-container">
-    <img
-      [src]="
-        '/images/skills/' +
-        getCard('actual')?.element?.toLowerCase() +
-        '/' +
-        getCard('actual')?.srcImg
-      "
-      class="skill"
-    />
-  </div>
-  <span class="titleCard">{{ getCard('actual')?.title }}</span>
 
-  <span class="descCard">
-    {{
-      getCard('actual')?.desc?.replace(
-        '{0}',
-        (
-          getCard('actual')!.variableLvl[
-            getRarityIndex(getCard('actual')!, selectedRarity)
-          ] ?? ''
-        ).toString()
-      )
-    }}
-  </span>
-</div>
+  <div
+    class="cardInfo"
+    id="principalCard"
+    (click)="advanceRarity(getCard('actual')!)"
+  >
+    <img
+      src="/images/frames/RatakarutaCardFrameLv{{
+        getRarityLvlCard(getCard('actual')!)
+      }}.png"
+      class="frame"
+    />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{
+        getCard('actual')?.element
+      }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        [src]="
+          '/images/skills/' +
+          getCard('actual')?.element?.toLowerCase() +
+          '/' +
+          getCard('actual')?.srcImg
+        "
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{ getCard("actual")?.title }}</span>
+
+    <span class="descCard">
+      {{
+        getCard("actual")?.desc?.replace(
+          "{0}",
+          (
+            getCard("actual")!.variableLvl[
+              getRarityIndex(getCard("actual")!, selectedRarity)
+            ] ?? ""
+          ).toString()
+        )
+      }}
+    </span>
+  </div>
 
   <div class="cardInfo" id="forwardCard1" (click)="move('forward1')">
     <img
@@ -209,41 +210,6 @@
     </span>
   </div>
 </div>
-
-<!--
-<div id="cards">
-  <div
-    class="cardInfo"
-    *ngFor="let card of cards[selectedElement].cards"
-    (click)="advanceRarity(card)"
-  >
-    <img
-      src="/images/frames/RatakarutaCardFrameLv{{
-        card.rarityLvl[getRarityIndex(card, selectedRarity)]
-      }}.png"
-      class="frame"
-    />
-    <img
-      src="/images/frames/RatakarutaCardFrame_{{ card.element }}.png"
-      class="overlay"
-    />
-    <div class="skill-container">
-      <img
-        src="/images/skills/{{ card.element.toLowerCase() }}/{{ card.srcImg }}"
-        class="skill"
-      />
-    </div>
-    <span class="titleCard">{{ card.title }}</span>
-
-    <span class="descCard">{{
-      card.desc.replace(
-        "{0}",
-        card.variableLvl[getRarityIndex(card, selectedRarity)].toString()
-      )
-    }}</span>
-  </div>
-</div>
--->
 
 <div id="cardsMobile">
   <div
