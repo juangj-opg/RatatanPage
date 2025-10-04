@@ -19,38 +19,50 @@
       alt="{{ skill.title }}"
     />
   </div>
-</div> 
-<div id="cards">
-  <div class="card" (click)="advanceRarity(cards[selectedCard])">
+</div>
+
+<div id="cardsMobile">
+  <div
+    class="cardInfo"
+    (click)="advanceRarity(cards[selectedElement].cards[selectedCard])"
+  >
     <img
       src="/images/frames/RatakarutaCardFrameLv{{
-        cards[selectedCard].rarityLvl[
-          getRarityIndex(cards[selectedCard], selectedRarity)
+        cards[selectedElement].cards[selectedCard].rarityLvl[
+          getRarityIndex(
+            cards[selectedElement].cards[selectedCard],
+            selectedRarity
+          )
         ]
       }}.png"
       class="frame"
     />
     <img
       src="/images/frames/RatakarutaCardFrame_{{
-        cards[selectedCard].element
+        cards[selectedElement].cards[selectedCard].element
       }}.png"
       class="overlay"
     />
     <div class="skill-container">
       <img
-        src="/images/skills/{{ cards[selectedCard].element.toLowerCase() }}/{{
-          cards[selectedCard].srcImg
-        }}"
+        src="/images/skills/{{
+          cards[selectedElement].cards[selectedCard].element.toLowerCase()
+        }}/{{ cards[selectedElement].cards[selectedCard].srcImg }}"
         class="skill"
       />
     </div>
-    <span class="titleCard">{{ cards[selectedCard].title }}</span>
+    <span class="titleCard">{{
+      cards[selectedElement].cards[selectedCard].title
+    }}</span>
 
     <span class="descCard">{{
-      cards[selectedCard].desc.replace(
+      cards[selectedElement].cards[selectedCard].desc.replace(
         "{0}",
-        cards[selectedCard].variableLvl[
-          getRarityIndex(cards[selectedCard], selectedRarity)
+        cards[selectedElement].cards[selectedCard].variableLvl[
+          getRarityIndex(
+            cards[selectedElement].cards[selectedCard],
+            selectedRarity
+          )
         ].toString()
       )
     }}</span>
@@ -75,7 +87,7 @@
     <div
       class="element"
       *ngFor="let element of elements; let i = index"
-      (click)="selectedElement = i"
+      (click)="selectedElement = i; selectedCard = 0"
     >
       <img
         src="/images/elements/{{ element.srcImg }}"

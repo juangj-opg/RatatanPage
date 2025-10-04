@@ -60,11 +60,10 @@ div#cards {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-div#cards .card {
+div#cards .cardInfo {
   position: relative;
   width: 400px;
   aspect-ratio: 3/5;
@@ -270,6 +269,109 @@ div#skillsMobile .skillTitleMobile {
   width: -webkit-fill-available;
 }
 
+/* Diseño de carta para versión móvil*/
+div#cardsMobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+div#cardsMobile .cardInfo {
+  position: relative;
+  width: 400px;
+  aspect-ratio: 3/5;
+}
+
+div#cardsMobile .overlay {
+  position: absolute;
+  z-index: 6;
+  object-fit: cover;
+  width: 100%;
+  left: -1%;
+}
+
+div#cardsMobile .titleCard,
+div#cardsMobile .descCard {
+  position: absolute;
+  z-index: 6;
+  color: white;
+  font-weight: bold;
+}
+
+div#cardsMobile .titleCard {
+  top: 6.2%;
+  left: 32%;
+  right: 7%;
+  font-family: "titleCard", sans-serif;
+  font-size: 21px;
+  height: 50px;
+  width: 235px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+}
+
+div#cardsMobile .descCard {
+  top: 55.8%;
+  left: 17%;
+  right: 8%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+div#cardsMobile .frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  object-fit: cover;
+}
+
+div#cardsMobile .skill-container {
+  position: absolute;
+  top: 16%;
+  left: 14%;
+  width: 82%;
+  height: 40%;
+  z-index: 4;
+}
+
+div#cardsMobile .skill {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+div#cardsMobile .skill-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.7));
+  z-index: 2;
+  pointer-events: none;
+}
+
+div#cardsMobile .skill-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+  z-index: 2;
+  pointer-events: none;
+}
+
 /* Fin Diseño Icono desplegable  */
 
 /* Diseño Responsive */
@@ -284,12 +386,17 @@ div#skillsMobile .skillTitleMobile {
 @media only screen and (max-width: 768px) {
   div#elements,
   div#skills,
-  div#rarities {
+  div#rarities,
+  div#cards {
     display: none;
   }
 
   div#iconDesplegable {
     display: block;
+  }
+
+  div#cardsMobile {
+    display: flex;
   }
 }
 
