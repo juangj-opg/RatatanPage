@@ -975,4 +975,72 @@ export class SkilsComponent {
     const newIndex = (index + offset + len) % len;
     return cards[newIndex];
   }
+
+  angleOffset = 0; // nuevo campo de clase
+
+  getCardStyle(i: number) {
+    const total = this.cards[this.selectedElement].cards.length;
+    const angleStep = 360 / total;
+
+    // 🔁 Cada carta tiene un ángulo fijo dentro del círculo
+    const angle = i * angleStep + this.angleOffset;
+
+    const radius = 620;
+    const isActive = i === this.selectedCard;
+
+    // 🔍 Carta seleccionada más grande y adelante
+    const scale = isActive ? 1.6 : 1;
+    const translateZ = isActive ? radius + 350 : radius;
+    const opacity = isActive ? 1 : 0.6;
+    const zIndex = 100 - Math.abs((i - this.selectedCard + total) % total);
+
+    return {
+      transform: `
+      rotateY(${angle}deg)
+      translateZ(${translateZ}px)
+      scale(${scale})
+    `,
+      opacity,
+      zIndex,
+      transition: 'transform 0.8s ease, opacity 0.6s ease',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transformOrigin: 'center center',
+    };
+  }
+
+  selectCard(i: number) {
+    const total = this.cards[this.selectedElement].cards.length;
+
+    // Diferencia bruta
+    let diff = i - this.selectedCard;
+
+    // 🧮 Normalizar la diferencia al rango [-total/2, total/2]
+    if (diff > total / 2) diff -= total;
+    if (diff < -total / 2) diff += total;
+
+    // ⟳ Rotar el círculo el ángulo justo sin vueltas completas
+    this.angleOffset -= diff * (360 / total);
+
+    // 📍 Actualizar carta seleccionada
+    this.selectedCard = i;
+  }
+
+  getCardTransform(i: number): string {
+    const len = this.cards[this.selectedElement].cards.length;
+    const diff = (i - this.selectedCard + len) % len;
+
+    const radius = 300; // separación entre cartas
+    const angle = (diff / len) * 360;
+    const scale = i === this.selectedCard ? 1 : 0.8;
+    const z = i === this.selectedCard ? 200 : 100;
+
+    return `
+    rotateY(${angle}deg)
+    translateZ(${radius}px)
+    scale(${scale})
+    translateY(${i === this.selectedCard ? '0' : '10px'})
+  `;
+  }
 }
