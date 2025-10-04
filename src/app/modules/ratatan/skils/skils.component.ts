@@ -989,9 +989,9 @@ export class SkilsComponent {
     const isActive = i === this.selectedCard;
 
     // 🔍 Carta seleccionada más grande y adelante
-    const scale = isActive ? 1.6 : 1;
-    const translateZ = isActive ? radius + 350 : radius;
-    const opacity = isActive ? 1 : 0.6;
+    const scale = isActive ? 1.1 : 0.9;
+    const translateZ = isActive ? radius : radius-30;
+    const opacity = isActive ? 1 : 0.5;
     const zIndex = 100 - Math.abs((i - this.selectedCard + total) % total);
 
     return {
@@ -1005,7 +1005,6 @@ export class SkilsComponent {
       transition: 'transform 0.8s ease, opacity 0.6s ease',
       position: 'absolute',
       top: '50%',
-      left: '50%',
       transformOrigin: 'center center',
     };
   }
