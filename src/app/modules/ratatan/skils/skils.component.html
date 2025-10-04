@@ -7,9 +7,9 @@
     <img src="/images/elements/{{ element.srcImg }}" alt="{{ element.name }}" />
   </div>
 </div>
-
+{{selectedCard}}
 <div id="cards">
-  <div class="cardInfo" id="backwardCard2">
+  <div class="cardInfo" id="backwardCard2" (click)="move('backward2')">
     <img
       src="/images/frames/RatakarutaCardFrameLv{{
         cards[selectedElement].cards[selectedCard - 2] == undefined
@@ -23,7 +23,7 @@
                 selectedRarity
               )
             ]
-          : cards[selectedElement].cards[selectedCard].rarityLvl[
+          : cards[selectedElement].cards[selectedCard-2].rarityLvl[
               getRarityIndex(
                 cards[selectedElement].cards[selectedCard - 2],
                 selectedRarity
@@ -91,7 +91,7 @@
           )
     }}</span>
   </div>
-  <div class="cardInfo" id="backwardCard1">
+  <div class="cardInfo" id="backwardCard1" (click)="move('backward1')">
     <img
       src="/images/frames/RatakarutaCardFrameLv{{
         cards[selectedElement].cards[selectedCard - 1] == undefined
@@ -219,7 +219,7 @@
       )
     }}</span>
   </div>
-  <div class="cardInfo" id="forwardCard1">
+  <div class="cardInfo" id="forwardCard1" (click)="move('forward1')">
     <img
       src="/images/frames/RatakarutaCardFrameLv{{
         cards[selectedElement].cards[selectedCard + 1] == undefined
@@ -282,7 +282,7 @@
           )
     }}</span>
   </div>
-  <div class="cardInfo" id="forwardCard2">
+  <div class="cardInfo" id="forwardCard2" (click)="move('forward2')">
     <img
       src="/images/frames/RatakarutaCardFrameLv{{
         cards[selectedElement].cards[selectedCard + 2] == undefined

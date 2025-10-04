@@ -910,7 +910,9 @@ export class SkilsComponent {
   }
 
   selectSkill(skill: Skill) {
-    let findIndex = this.cards[this.selectedElement].cards.findIndex((c) => c.title == skill.title);
+    let findIndex = this.cards[this.selectedElement].cards.findIndex(
+      (c) => c.title == skill.title
+    );
     if (findIndex != -1) this.selectedCard = findIndex;
     console.log(this.selectedCard);
   }
@@ -928,5 +930,31 @@ export class SkilsComponent {
     if (card.rarityLvl[indexActual + 1] == undefined)
       this.selectedRarity = card.rarityLvl[0];
     else this.selectedRarity++;
+  }
+
+  move(moveDirection: string) {
+    let selectedCards: Card[] = this.cards[this.selectedElement].cards;
+    console.log(selectedCards.length);
+    console.log(this.selectedCard >= selectedCards.length - 1);
+    console.log(selectedCards.length - 1);
+    if (moveDirection == 'forward1')
+      this.selectedCard >= selectedCards.length - 1
+        ? (this.selectedCard = 0)
+        : this.selectedCard++;
+    else if (moveDirection == 'forward2')
+      this.selectedCard >= selectedCards.length - 1
+        ? (this.selectedCard = 0)
+        : this.selectedCard++,
+        this.selectedCard++;
+    else if (moveDirection == 'backward1')
+      if (this.selectedCard == 0) this.selectedCard = selectedCards.length - 1;
+      else {
+        this.selectedCard--;
+      }
+    else if (moveDirection == 'backward2')
+      this.selectedCard == 0 || this.selectedCard == 1
+        ? (this.selectedCard = selectedCards.length - 1)
+        : this.selectedCard--,
+        this.selectedCard--;
   }
 }
