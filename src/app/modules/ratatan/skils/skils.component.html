@@ -8,22 +8,383 @@
   </div>
 </div>
 
-<div id="skills">
+<div id="cards">
+  <div class="cardInfo" id="backwardCard2">
+    <img
+      src="/images/frames/RatakarutaCardFrameLv{{
+        cards[selectedElement].cards[selectedCard - 2] == undefined
+          ? cards[selectedElement].cards[
+              cards[selectedElement].cards.length - 2
+            ].rarityLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[
+                  cards[selectedElement].cards.length - 2
+                ],
+                selectedRarity
+              )
+            ]
+          : cards[selectedElement].cards[selectedCard].rarityLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard - 2],
+                selectedRarity
+              )
+            ]
+      }}.png"
+      class="frame"
+    />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{
+        cards[selectedElement].cards[selectedCard - 2] == undefined
+          ? cards[selectedElement].cards[
+              cards[selectedElement].cards.length - 2
+            ].element
+          : cards[selectedElement].cards[selectedCard - 2].element
+      }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        src="/images/skills/{{
+          cards[selectedElement].cards[selectedCard].element.toLowerCase()
+        }}/{{
+          cards[selectedElement].cards[selectedCard - 2] == undefined
+            ? cards[selectedElement].cards[
+                cards[selectedElement].cards.length - 2
+              ].srcImg
+            : cards[selectedElement].cards[selectedCard - 2].srcImg
+        }}"
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{
+      cards[selectedElement].cards[selectedCard - 2] == undefined
+        ? cards[selectedElement].cards[cards[selectedElement].cards.length - 2]
+            .title
+        : cards[selectedElement].cards[selectedCard - 2].title
+    }}</span>
+
+    <span class="descCard">{{
+      cards[selectedElement].cards[selectedCard - 2] == undefined
+        ? cards[selectedElement].cards[
+            cards[selectedElement].cards.length - 2
+          ].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[
+              cards[selectedElement].cards.length - 2
+            ].variableLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[
+                  cards[selectedElement].cards.length - 2
+                ],
+                selectedRarity
+              )
+            ].toString()
+          )
+        : cards[selectedElement].cards[selectedCard - 2].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[selectedCard - 2].variableLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard - 2],
+                selectedRarity
+              )
+            ].toString()
+          )
+    }}</span>
+  </div>
+  <div class="cardInfo" id="backwardCard1">
+    <img
+      src="/images/frames/RatakarutaCardFrameLv{{
+        cards[selectedElement].cards[selectedCard - 1] == undefined
+          ? cards[selectedElement].cards[
+              cards[selectedElement].cards.length - 1
+            ].rarityLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[
+                  cards[selectedElement].cards.length - 1
+                ],
+                selectedRarity
+              )
+            ]
+          : cards[selectedElement].cards[selectedCard].rarityLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard - 1],
+                selectedRarity
+              )
+            ]
+      }}.png"
+      class="frame"
+    />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{
+        cards[selectedElement].cards[selectedCard - 1] == undefined
+          ? cards[selectedElement].cards[
+              cards[selectedElement].cards.length - 1
+            ].element
+          : cards[selectedElement].cards[selectedCard - 1].element
+      }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        src="/images/skills/{{
+          cards[selectedElement].cards[selectedCard].element.toLowerCase()
+        }}/{{
+          cards[selectedElement].cards[selectedCard - 1] == undefined
+            ? cards[selectedElement].cards[
+                cards[selectedElement].cards.length - 1
+              ].srcImg
+            : cards[selectedElement].cards[selectedCard - 1].srcImg
+        }}"
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{
+      cards[selectedElement].cards[selectedCard - 1] == undefined
+        ? cards[selectedElement].cards[cards[selectedElement].cards.length - 1]
+            .title
+        : cards[selectedElement].cards[selectedCard - 1].title
+    }}</span>
+
+    <span class="descCard">{{
+      cards[selectedElement].cards[selectedCard - 1] == undefined
+        ? cards[selectedElement].cards[
+            cards[selectedElement].cards.length - 1
+          ].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[
+              cards[selectedElement].cards.length - 1
+            ].variableLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[
+                  cards[selectedElement].cards.length - 1
+                ],
+                selectedRarity
+              )
+            ].toString()
+          )
+        : cards[selectedElement].cards[selectedCard - 1].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[selectedCard - 1].variableLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard - 1],
+                selectedRarity
+              )
+            ].toString()
+          )
+    }}</span>
+  </div>
   <div
-    class="skill"
-    *ngFor="let skill of skills[selectedElement].skills"
-    (click)="selectSkill(skill)"
+    class="cardInfo"
+    id="principalCard"
+    (click)="advanceRarity(cards[selectedElement].cards[selectedCard])"
   >
     <img
-      src="/images/skills/{{ skill.elementType }}/{{ skill.srcImg }}"
-      alt="{{ skill.title }}"
+      src="/images/frames/RatakarutaCardFrameLv{{
+        cards[selectedElement].cards[selectedCard].rarityLvl[
+          getRarityIndex(
+            cards[selectedElement].cards[selectedCard],
+            selectedRarity
+          )
+        ]
+      }}.png"
+      class="frame"
     />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{
+        cards[selectedElement].cards[selectedCard].element
+      }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        src="/images/skills/{{
+          cards[selectedElement].cards[selectedCard].element.toLowerCase()
+        }}/{{ cards[selectedElement].cards[selectedCard].srcImg }}"
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{
+      cards[selectedElement].cards[selectedCard].title
+    }}</span>
+
+    <span class="descCard">{{
+      cards[selectedElement].cards[selectedCard].desc.replace(
+        "{0}",
+        cards[selectedElement].cards[selectedCard].variableLvl[
+          getRarityIndex(
+            cards[selectedElement].cards[selectedCard],
+            selectedRarity
+          )
+        ].toString()
+      )
+    }}</span>
+  </div>
+  <div class="cardInfo" id="forwardCard1">
+    <img
+      src="/images/frames/RatakarutaCardFrameLv{{
+        cards[selectedElement].cards[selectedCard + 1] == undefined
+          ? cards[selectedElement].cards[
+              cards[selectedElement].cards.length + 1
+            ].rarityLvl[
+              getRarityIndex(cards[selectedElement].cards[0], selectedRarity)
+            ]
+          : cards[selectedElement].cards[selectedCard].rarityLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard + 1],
+                selectedRarity
+              )
+            ]
+      }}.png"
+      class="frame"
+    />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{
+        cards[selectedElement].cards[selectedCard + 1] == undefined
+          ? cards[selectedElement].cards[0].element
+          : cards[selectedElement].cards[selectedCard + 1].element
+      }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        src="/images/skills/{{
+          cards[selectedElement].cards[selectedCard].element.toLowerCase()
+        }}/{{
+          cards[selectedElement].cards[selectedCard + 1] == undefined
+            ? cards[selectedElement].cards[0].srcImg
+            : cards[selectedElement].cards[selectedCard + 1].srcImg
+        }}"
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{
+      cards[selectedElement].cards[selectedCard + 1] == undefined
+        ? cards[selectedElement].cards[0].title
+        : cards[selectedElement].cards[selectedCard + 1].title
+    }}</span>
+
+    <span class="descCard">{{
+      cards[selectedElement].cards[selectedCard + 1] == undefined
+        ? cards[selectedElement].cards[0].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[0].variableLvl[
+              getRarityIndex(cards[selectedElement].cards[0], selectedRarity)
+            ].toString()
+          )
+        : cards[selectedElement].cards[selectedCard + 1].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[selectedCard + 1].variableLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard + 1],
+                selectedRarity
+              )
+            ].toString()
+          )
+    }}</span>
+  </div>
+  <div class="cardInfo" id="forwardCard2">
+    <img
+      src="/images/frames/RatakarutaCardFrameLv{{
+        cards[selectedElement].cards[selectedCard + 2] == undefined
+          ? cards[selectedElement].cards[
+              cards[selectedElement].cards.length + 2
+            ].rarityLvl[
+              getRarityIndex(cards[selectedElement].cards[1], selectedRarity)
+            ]
+          : cards[selectedElement].cards[selectedCard].rarityLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard + 2],
+                selectedRarity
+              )
+            ]
+      }}.png"
+      class="frame"
+    />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{
+        cards[selectedElement].cards[selectedCard + 2] == undefined
+          ? cards[selectedElement].cards[1].element
+          : cards[selectedElement].cards[selectedCard + 2].element
+      }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        src="/images/skills/{{
+          cards[selectedElement].cards[selectedCard].element.toLowerCase()
+        }}/{{
+          cards[selectedElement].cards[selectedCard + 2] == undefined
+            ? cards[selectedElement].cards[1].srcImg
+            : cards[selectedElement].cards[selectedCard + 2].srcImg
+        }}"
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{
+      cards[selectedElement].cards[selectedCard + 2] == undefined
+        ? cards[selectedElement].cards[1].title
+        : cards[selectedElement].cards[selectedCard + 2].title
+    }}</span>
+
+    <span class="descCard">{{
+      cards[selectedElement].cards[selectedCard + 2] == undefined
+        ? cards[selectedElement].cards[1].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[1].variableLvl[
+              getRarityIndex(cards[selectedElement].cards[1], selectedRarity)
+            ].toString()
+          )
+        : cards[selectedElement].cards[selectedCard + 2].desc.replace(
+            "{0}",
+            cards[selectedElement].cards[selectedCard + 2].variableLvl[
+              getRarityIndex(
+                cards[selectedElement].cards[selectedCard + 2],
+                selectedRarity
+              )
+            ].toString()
+          )
+    }}</span>
   </div>
 </div>
 
-<div id="cardsMobile">
+<!--
+<div id="cards">
   <div
     class="cardInfo"
+    *ngFor="let card of cards[selectedElement].cards"
+    (click)="advanceRarity(card)"
+  >
+    <img
+      src="/images/frames/RatakarutaCardFrameLv{{
+        card.rarityLvl[getRarityIndex(card, selectedRarity)]
+      }}.png"
+      class="frame"
+    />
+    <img
+      src="/images/frames/RatakarutaCardFrame_{{ card.element }}.png"
+      class="overlay"
+    />
+    <div class="skill-container">
+      <img
+        src="/images/skills/{{ card.element.toLowerCase() }}/{{ card.srcImg }}"
+        class="skill"
+      />
+    </div>
+    <span class="titleCard">{{ card.title }}</span>
+
+    <span class="descCard">{{
+      card.desc.replace(
+        "{0}",
+        card.variableLvl[getRarityIndex(card, selectedRarity)].toString()
+      )
+    }}</span>
+  </div>
+</div>
+-->
+
+<div id="cardsMobile">
+  <div
+    class="card"
     (click)="advanceRarity(cards[selectedElement].cards[selectedCard])"
   >
     <img

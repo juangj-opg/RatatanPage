@@ -65,8 +65,22 @@ div#cards {
 
 div#cards .cardInfo {
   position: relative;
-  width: 400px;
   aspect-ratio: 3/5;
+  margin: 0 10px;
+}
+
+#principalCard {
+  width: 25%;
+}
+
+#backwardCard1,
+#forwardCard1 {
+  width: 20%;
+}
+
+#backwardCard2,
+#forwardCard2 {
+  width: 15%;
 }
 
 div#cards .overlay {
@@ -278,7 +292,7 @@ div#cardsMobile {
   flex-direction: row;
 }
 
-div#cardsMobile .cardInfo {
+div#cardsMobile .card {
   position: relative;
   width: 400px;
   aspect-ratio: 3/5;
