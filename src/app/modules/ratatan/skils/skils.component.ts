@@ -932,29 +932,58 @@ export class SkilsComponent {
     else this.selectedRarity++;
   }
 
-  move(moveDirection: string) {
-    let selectedCards: Card[] = this.cards[this.selectedElement].cards;
-    console.log(selectedCards.length);
-    console.log(this.selectedCard >= selectedCards.length - 1);
-    console.log(selectedCards.length - 1);
-    if (moveDirection == 'forward1')
-      this.selectedCard >= selectedCards.length - 1
-        ? (this.selectedCard = 0)
-        : this.selectedCard++;
-    else if (moveDirection == 'forward2')
-      this.selectedCard >= selectedCards.length - 1
-        ? (this.selectedCard = 0)
-        : this.selectedCard++,
-        this.selectedCard++;
-    else if (moveDirection == 'backward1')
-      if (this.selectedCard == 0) this.selectedCard = selectedCards.length - 1;
-      else {
-        this.selectedCard--;
-      }
-    else if (moveDirection == 'backward2')
-      this.selectedCard == 0 || this.selectedCard == 1
-        ? (this.selectedCard = selectedCards.length - 1)
-        : this.selectedCard--,
-        this.selectedCard--;
+  move(direction: 'forward1' | 'forward2' | 'backward1' | 'backward2'): void {
+    const cards = this.cards[this.selectedElement].cards;
+    const len = cards.length;
+
+    // Mapa de desplazamientos
+    const offsets: Record<typeof direction, number> = {
+      forward1: 1,
+      forward2: 2,
+      backward1: -1,
+      backward2: -2,
+    };
+
+    // Calculamos nuevo índice circular
+    const offset = offsets[direction];
+    this.selectedCard = (((this.selectedCard + offset) % len) + len) % len;
+
+    console.log(
+      `Move: ${direction} | offset ${offset} | new index: ${
+        this.selectedCard
+      }/${len - 1}`
+    );
+  }
+  getRarityLvlCard(card: Card) {
+    // Cuenta cuantas rarezas existen
+    let numRarezas = card.rarityLvl.length;
+    let rarezaSeleccionada = this.selectedRarity;
+    if (rarezaSeleccionada > numRarezas)
+      return card.rarityLvl[card.rarityLvl.length - 1];
+    else if (card.rarityLvl.findIndex((r) => r == rarezaSeleccionada) != -1)
+      return card.rarityLvl.find((r) => r == rarezaSeleccionada);
+    else return card.rarityLvl[0];
+  }
+
+  getCard(direction: string): Card | undefined {
+    const cards = this.cards[this.selectedElement].cards;
+    const len = cards.length;
+    const index = this.selectedCard;
+
+    // Mapa de desplazamientos
+    const offsets: Record<string, number> = {
+      actual: 0,
+      prev1: -1,
+      prev2: -2,
+      forw1: 1,
+      forw2: 2,
+    };
+
+    const offset = offsets[direction];
+    if (offset === undefined) return undefined;
+
+    // Índice circular (si es negativo o supera el tamaño)
+    const newIndex = (index + offset + len) % len;
+    return cards[newIndex];
   }
 }
