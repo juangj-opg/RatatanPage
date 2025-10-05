@@ -692,7 +692,7 @@ export class SkilsComponent {
         },
         {
           title: 'Caída Tóxica+',
-          desc: 'Daño de Fuerza Elemental Venenosa aumentapor {0}%.',
+          desc: 'Daño de Fuerza Elemental Venenosa aumenta por {0}%.',
           element: 'Poison',
           rarityLvl: [1, 2],
           variableLvl: [50, 100],
@@ -904,10 +904,15 @@ export class SkilsComponent {
     },
   ];
 
-  getRarityIndex(card: Card, raritySlot: number) {
-    let findIndex = card.rarityLvl.findIndex((r) => r == raritySlot);
-    return findIndex >= 0 ? findIndex : 0;
-  }
+getRarityIndex(card: Card, raritySlot: number) {
+  let findIndex = card.rarityLvl.findIndex((r) => r == raritySlot);
+
+  if (findIndex >= 0) return findIndex;
+  if (raritySlot > Math.max(...card.rarityLvl))
+    return card.rarityLvl.indexOf(Math.max(...card.rarityLvl));
+  return 0;
+}
+
 
   selectSkill(skill: Skill) {
     let findIndex = this.cards[this.selectedElement].cards.findIndex(
@@ -927,7 +932,9 @@ export class SkilsComponent {
         ? card.rarityLvl.findIndex((rarity) => rarity == this.selectedRarity)
         : 0;
 
-    if (card.rarityLvl[indexActual + 1] == undefined)
+    let findRarity = card.rarityLvl.findIndex((r) => r == this.selectedRarity);
+
+    if (card.rarityLvl[indexActual + 1] == undefined || findRarity == -1)
       this.selectedRarity = card.rarityLvl[0];
     else this.selectedRarity++;
   }
@@ -953,6 +960,8 @@ export class SkilsComponent {
       return card.rarityLvl[card.rarityLvl.length - 1];
     else if (card.rarityLvl.findIndex((r) => r == rarezaSeleccionada) != -1)
       return card.rarityLvl.find((r) => r == rarezaSeleccionada);
+    else if (rarezaSeleccionada > Math.max(...card.rarityLvl))
+      return Math.max(...card.rarityLvl);
     else return card.rarityLvl[0];
   }
 
@@ -976,24 +985,25 @@ export class SkilsComponent {
     return cards[newIndex];
   }
 
-  angleOffset = 0; // nuevo campo de clase
+  angleOffset = 0;
 
   getCardStyle(i: number) {
     const total = this.cards[this.selectedElement].cards.length;
     const angleStep = 360 / total;
 
-    // 🔁 Cada carta tiene un ángulo fijo dentro del círculo
+    // Angulo de cada carta establecido por el nº total de cartas
     const angle = i * angleStep + this.angleOffset;
 
     const radius = 620;
     const isActive = i === this.selectedCard;
 
-    // 🔍 Carta seleccionada más grande y adelante
+    // Carta seleccionada con un aspecto diferente al resto
     const scale = isActive ? 1.1 : 0.9;
-    const translateZ = isActive ? radius : radius-30;
+    const translateZ = isActive ? radius : radius - 30;
     const opacity = isActive ? 1 : 0.5;
-    const zIndex = 100 - Math.abs((i - this.selectedCard + total) % total);
+    const zIndex = 10 - Math.abs((i - this.selectedCard + total) % total);
 
+    // Estilos que se le retorna a cada carta y recolocadas en su lugar
     return {
       transform: `
       rotateY(${angle}deg)
@@ -1012,17 +1022,15 @@ export class SkilsComponent {
   selectCard(i: number) {
     const total = this.cards[this.selectedElement].cards.length;
 
-    // Diferencia bruta
     let diff = i - this.selectedCard;
 
-    // 🧮 Normalizar la diferencia al rango [-total/2, total/2]
+    // Para diferenciar el par del impar y hacer un movimiento normalizado
     if (diff > total / 2) diff -= total;
     if (diff < -total / 2) diff += total;
 
-    // ⟳ Rotar el círculo el ángulo justo sin vueltas completas
+    // Girar el carousel según la carta seleccionada
     this.angleOffset -= diff * (360 / total);
 
-    // 📍 Actualizar carta seleccionada
     this.selectedCard = i;
   }
 
@@ -1030,7 +1038,7 @@ export class SkilsComponent {
     const len = this.cards[this.selectedElement].cards.length;
     const diff = (i - this.selectedCard + len) % len;
 
-    const radius = 300; // separación entre cartas
+    const radius = 300; // Separación entre cartas
     const angle = (diff / len) * 360;
     const scale = i === this.selectedCard ? 1 : 0.8;
     const z = i === this.selectedCard ? 200 : 100;
