@@ -315,11 +315,11 @@ div#cardsMobile .descCard {
 }
 
 div#cardsMobile .titleCard {
-  top: 6.2%;
-  left: 32%;
+  top: 6.1%;
+  left: 31.5%;
   right: 7%;
   font-family: "titleCard", sans-serif;
-  font-size: 21px;
+  font-size: 25.3px;
   height: 50px;
   width: 235px;
   display: flex;
@@ -328,7 +328,7 @@ div#cardsMobile .titleCard {
 }
 
 div#cardsMobile .descCard {
-  top: 55.8%;
+  top: 55.3%;
   left: 17%;
   right: 8%;
   font-family: "Quicksand", sans-serif;
@@ -453,10 +453,6 @@ div#cardsMobile .skill-container::after {
   div#cardsMobile {
     display: flex;
   }
-}
-
-@media only screen and (max-width: 992px){
-
 }
 
 /* Fin Diseño Responsive*/
