@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:static": "ng build --configuration production --output-path dist",
+    "build:static": "ng build --configuration production --output-path dist && mv dist/browser/index.csr.html dist/browser/index.html",
     "serve:ssr:proyRatatanPage": "node dist/proy-ratatan-page/server/server.mjs"
   },
   "private": true,
