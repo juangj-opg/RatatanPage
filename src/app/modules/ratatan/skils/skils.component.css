@@ -100,13 +100,13 @@ div#cards .descCard {
 }
 
 div#cards .titleCard {
-  top: 4.6%;
-  left: 32%;
+  top: 4.8%;
+  left: 31%;
   right: 7%;
   font-family: "titleCard", sans-serif;
-  font-size: 19px;
+  font-size: 18.4px;
   height: 50px;
-  width: 235px;
+  width: 172px;
   display: flex;
   align-items: center;
   letter-spacing: 1px;
@@ -388,33 +388,6 @@ div#cardsMobile .skill-container::after {
 
 /* Fin Diseño Icono desplegable  */
 
-/* Diseño Responsive */
-
-@media only screen and (max-width: 665px) {
-  div#elementsMobile {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  div#elements,
-  div#skills,
-  div#rarities,
-  div#cards {
-    display: none;
-  }
-
-  div#iconDesplegable {
-    display: block;
-  }
-
-  div#cardsMobile {
-    display: flex;
-  }
-}
-
-/* Fin Diseño Responsive*/
 /* ===== Carrusel 3D limpio ===== */
 
 .carousel-container {
@@ -456,3 +429,34 @@ div#cardsMobile .skill-container::after {
 }
 
 /* ===== Fin carrusel 3D ===== */
+
+/* Diseño Responsive */
+
+@media only screen and (max-width: 665px) {
+  div#elementsMobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  div#elements,
+  div#skills,
+  div#rarities,
+  div#cards {
+    display: none !important;
+  }
+
+  div#iconDesplegable {
+    display: block;
+  }
+
+  div#cardsMobile {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 992px){
+
+}
+
+/* Fin Diseño Responsive*/
