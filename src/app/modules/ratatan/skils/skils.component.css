@@ -1,10 +1,19 @@
 /* Diseño barra elementos */
 
 div#elements {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.element{
+  margin: 0 4px;
+}
+
+.element img {
+  width: 80px;
 }
 
 /* FIN Diseño barra elementos */

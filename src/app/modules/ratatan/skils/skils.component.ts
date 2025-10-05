@@ -11,7 +11,7 @@ import { CardSlot } from '../../../models/CardSlot';
   styleUrl: './skils.component.css',
 })
 export class SkilsComponent {
-  selectedRarity = 3;
+  selectedRarity = 0;
   selectedElement = 0;
   selectedCard: number = 0;
 
@@ -999,7 +999,7 @@ getRarityIndex(card: Card, raritySlot: number) {
     // Carta seleccionada con un aspecto diferente al resto
     const scale = isActive ? 1.1 : 0.9;
     const translateZ = isActive ? radius : radius - 30;
-    const opacity = isActive ? 1 : 0.5;
+    const opacity = isActive ? 1 : 0.6;
     const zIndex = 10 - Math.abs((i - this.selectedCard + total) % total);
 
     // Estilos que se le retorna a cada carta y recolocadas en su lugar
