@@ -919,7 +919,6 @@ getRarityIndex(card: Card, raritySlot: number) {
       (c) => c.title == skill.title
     );
     if (findIndex != -1) this.selectedCard = findIndex;
-    console.log(this.selectedCard);
   }
 
   selectRarity(rarity: number) {
