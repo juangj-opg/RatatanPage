@@ -1,7 +1,7 @@
 div#cabecera {
   border-bottom: 5px solid black;
   padding: 10px 0px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: gainsboro;
 }
 
 div#contentPage {

@@ -9,6 +9,10 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [{ path: 'skills', component: SkilsComponent }],
   },
+  {
+    path: '**',
+    redirectTo: 'ratatan/skills'
+  }
 ];
 
 @NgModule({
