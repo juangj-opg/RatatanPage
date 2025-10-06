@@ -303,7 +303,7 @@ export class SkilsComponent {
         },
         {
           elementType: 'thunder',
-          title: 'Descarga Extra*',
+          title: 'Electrificación',
           srcImg: 'icn_ratacarta05_thunder_508m.png',
         },
         {
@@ -792,7 +792,7 @@ export class SkilsComponent {
           srcImg: 'icn_ratacarta05_thunder_507.png',
         },
         {
-          title: 'Descarga Extra*',
+          title: 'Electrificación',
           desc: 'El daño de Parálisis se activa {0} veces mientras el enemigo esté Paralizado',
           element: 'Thunder',
           rarityLvl: [2, 3],
