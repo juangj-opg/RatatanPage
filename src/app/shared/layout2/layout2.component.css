@@ -1,0 +1,31 @@
+div#cabecera {
+  border-bottom: 5px solid black;
+  padding: 10px 0px;
+  background-color: gainsboro;
+}
+
+div#contentPage {
+  position: relative;
+  width: 100%;
+  background-image: url("/images/background/ratatans.png"),
+    url("/images/background/background.png");
+  background-position: bottom center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  background-attachment: fixed;
+  background-blend-mode: normal;
+  overflow: hidden;
+}
+
+div#contentPage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 0;
+}
+
+div#contentPage > * {
+  position: relative;
+  z-index: 1;
+}

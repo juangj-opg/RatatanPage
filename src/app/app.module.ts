@@ -12,9 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SkilsComponent } from './modules/ratatan/skils/skils.component';
+import { BestiarioComponent } from './modules/bestiario/bestiario.component';
 
 @NgModule({
-  declarations: [AppComponent, SkilsComponent],
+  declarations: [AppComponent, SkilsComponent, BestiarioComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

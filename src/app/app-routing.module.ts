@@ -2,12 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SkilsComponent } from './modules/ratatan/skils/skils.component';
 import { LayoutComponent } from './shared/layout/layout.component';
+import { Layout2Component } from './shared/layout2/layout2.component';
+import { BestiarioComponent } from './modules/bestiario/bestiario.component';
 
 const routes: Routes = [
   {
     path: 'ratatan',
     component: LayoutComponent,
     children: [{ path: 'skills', component: SkilsComponent }],
+  },
+  {
+    path: 'ratatan',
+    component: LayoutComponent,
+    children: [{ path: 'bestiario', component: BestiarioComponent }],
   },
   {
     path: '**',
