@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'ratatan',
-    component: LayoutComponent,
+    component: Layout2Component,
     children: [{ path: 'bestiario', component: BestiarioComponent }],
   },
   {
