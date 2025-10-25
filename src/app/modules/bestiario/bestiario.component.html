@@ -24,9 +24,9 @@
     <div id="realContent">
       <div #gridItems id="gridItems">
         <img
+          *ngFor="let monster of data[selectedTab].monsters"
           src="/images/frames/GridItem.png"
           style="z-index: 20"
-          *ngFor="let _ of [].constructor(20)"
         />
       </div>
 

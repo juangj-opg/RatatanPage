@@ -26,10 +26,43 @@ export class BestiarioComponent implements AfterViewInit {
   selectedMonster = 0;
 
   data: Bestiary[] = [
-    { name: 'Teshitas', monsters: [{ name: 'Lancero' }] },
-    { name: 'Fauna', monsters: [{ name: 'Portrait' }] },
-    { name: 'Mini Bosses', monsters: [{ name: 'Squidly Pete' }] },
-    { name: 'Bosses', monsters: [{ name: 'Dekadon' }] },
+    {
+      name: 'Teshitas',
+      monsters: [
+        { name: 'Lancero' },
+        { name: 'Lancero' },
+        { name: 'Lancero' },
+        { name: 'Lancero' },
+      ],
+    },
+    {
+      name: 'Fauna',
+      monsters: [
+        { name: 'Portrait' },
+        { name: 'Portrait' },
+        { name: 'Portrait' },
+      ],
+    },
+    {
+      name: 'Mini Bosses',
+      monsters: [
+        { name: 'Squidly Pete' },
+        { name: 'Kit Lasso' },
+        { name: 'Son Jammer' },
+        { name: 'Thawner' },
+        { name: 'Boneless Bear' },
+      ],
+    },
+    {
+      name: 'Bosses',
+      monsters: [
+        { name: 'The Jolly Hermit' },
+        { name: 'Wagoon' },
+        { name: 'Lord Rosham Bo' },
+        { name: 'Chillwarden' },
+        { name: 'Flip Flop' },
+      ],
+    },
   ];
 
   selectTab(index: number) {
