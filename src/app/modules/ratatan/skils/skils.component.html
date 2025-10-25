@@ -36,9 +36,7 @@
       {{
         card.desc.replace(
           "{0}",
-          (
-            card.variableLvl[getRarityIndex(card, selectedRarity)] ?? ""
-          ).toString()
+          card.variableLvl[getRarityIndex(card, selectedRarity)].toString()
         )
       }}
     </span>
