@@ -1,0 +1,18 @@
+<div id="contentDiv">
+  <div id="cabecera">
+    <div id="contentCabecera">
+      <img src="/images/background/hudEsquina.png" alt="" id="imgHUDEsquina" />
+      <div (click)="backPage()">
+        <img src="/images/background/hudAtras.png" alt="" id="imgHUDAtras" />
+        <span id="spanHUDAtras">ATRÁS</span>
+      </div>
+      <span id="spanHUDTitle"> BESTIARIO </span>
+    </div>
+  </div>
+
+  <div id="contentPage">
+    <div id="content">
+      <router-outlet style="display: none"></router-outlet>
+    </div>
+  </div>
+</div>
