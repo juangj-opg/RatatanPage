@@ -1,3 +1,35 @@
+/* Tabs */
+
+.tab-bar {
+  position: absolute;
+  top: 11vh;
+  left: 20%;
+  display: flex;
+  z-index: 10;
+}
+
+.tab {
+  cursor: pointer;
+  width: 240px;
+  max-height: 50px;
+  transform: scaleX(1.4);
+}
+
+.tab + .tab {
+  margin-left: 25px;
+}
+
+.selectedTab {
+  z-index: 40;
+  transform: scaleX(1.4);
+  transform-origin: center;
+  max-height: 68px;
+}
+
+/* FIN Tabs*/
+
+/* Cuadro rectangular informativo (Grid + Scroll + Info + Icono)*/
+
 .banner {
   position: absolute;
   top: 15vh;
