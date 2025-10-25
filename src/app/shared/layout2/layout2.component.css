@@ -10,7 +10,7 @@ div#cabecera {
   z-index: 10;
   position: absolute;
   top: 0;
-  width: 500px;
+  width: 400px;
 }
 
 #imgHUDAtras {
@@ -18,19 +18,19 @@ div#cabecera {
   z-index: 11;
   position: absolute;
   top: 0;
-  width: 285px;
+  width: 228px;
 }
 
 #spanHUDAtras {
   z-index: 12;
-  font-size: 30px;
+  font-size: 24px;
   font-family: "RatatanIngame";
   letter-spacing: -1px;
   color: rgba(20, 20, 20, 1);
   position: absolute;
   user-select: none;
-  top: 61px;
-  left: 94px;
+  top: 48px;
+  left: 74px;
 }
 
 #spanHUDTitle {
@@ -40,9 +40,9 @@ div#cabecera {
   position: absolute;
   font-family: "titleCard";
   rotate: -45deg;
-  font-size: 70px;
-  top: 170px;
-  left: 105px;
+  font-size: 58px;
+  top: 135px;
+  left: 80px;
 }
 
 /* Fin Cabecera*/

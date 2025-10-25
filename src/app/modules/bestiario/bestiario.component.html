@@ -1,7 +1,25 @@
 <div class="banner">
   <div class="line-top"></div>
+
   <div class="content">
-    
+    <div id="realContent">
+      <div #gridItems id="gridItems">
+        <img
+          src="/images/frames/GridItem.png"
+          style="z-index: 20"
+          *ngFor="let _ of [].constructor(20)"
+        />
+      </div>
+
+      <div #scrollBar class="scrollbar">
+        <div
+          #scrollThumb
+          class="scroll-thumb"
+          (mousedown)="onThumbMouseDown($event)"
+        ></div>
+      </div>
+    </div>
   </div>
+
   <div class="line-bottom"></div>
 </div>
