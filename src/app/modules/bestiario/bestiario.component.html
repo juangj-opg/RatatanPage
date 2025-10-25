@@ -11,15 +11,30 @@
         />
       </div>
 
-      <div #scrollBar class="scrollbar">
-        <div
-          #scrollThumb
-          class="scroll-thumb"
-          (mousedown)="onThumbMouseDown($event)"
-        ></div>
+      <div class="scroll-wrapper">
+        <div #scrollBar class="scrollbar">
+          <div
+            #scrollThumb
+            class="scroll-thumb"
+            (mousedown)="onThumbMouseDown($event)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="info-wrapper">
+        <div class="triangle-glow-wrapper">
+          <div class="triangle-hack"></div>
+        </div>
+
+        <!-- Este va fuera del panel -->
+        <div class="info-panel">
+          <div class="info-panel__content">
+            <div class="panel-header-line"></div>
+            <!-- Tu contenido -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
   <div class="line-bottom"></div>
 </div>
