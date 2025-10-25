@@ -21,6 +21,21 @@ export class BestiarioComponent implements AfterViewInit {
   private startY = 0;
   private startTop = 0;
 
+  selectedTab = 3;
+  selectedMonster = 0;
+
+  data: Object[] = [
+    { name: 'Teshitas' },
+    { name: 'Fauna' },
+    { name: 'Mini Bosses' },
+    { name: 'Bosses' },
+  ];
+
+  selectTab(index: number) {
+    this.selectedTab = index;
+    this.selectedMonster = 0;
+  }
+
   ngAfterViewInit(): void {
     this.updateThumb();
   }

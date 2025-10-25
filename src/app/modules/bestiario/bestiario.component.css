@@ -20,10 +20,14 @@
 }
 
 .selectedTab {
-  z-index: 40;
+  z-index: 50;
   transform: scaleX(1.4);
   transform-origin: center;
   max-height: 68px;
+}
+
+.tab{
+  -webkit-user-drag: none;
 }
 
 /* FIN Tabs*/

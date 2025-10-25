@@ -1,8 +1,25 @@
 <div class="tab-bar">
+  <div
+    *ngFor="let tab of data; let i = index"
+    (click)="selectTab(i)"
+    [style]="selectedTab == i ? 'z-index: 50' : ''"
+  >
+    <img
+      [src]="
+        selectedTab == i
+          ? '/images/frames/selectedTab.png'
+          : '/images/frames/tab.png'
+      "
+      [class]="selectedTab == i ? 'selectedTab' : ''"
+      class="tab"
+    />
+  </div>
+  <!--
   <img src="/images/frames/tab.png" class="tab" />
   <img src="/images/frames/tab.png" class="tab" />
   <img src="/images/frames/tab.png" class="tab" />
-  <img src="/images/frames/selectedTab.png" class="tab selectedTab" />
+  <img src="/images/frames/selectedTab.png" class="tab selectedTab" /> 
+  -->
 </div>
 
 <div class="banner">
