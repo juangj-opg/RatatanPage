@@ -26,10 +26,27 @@
   max-height: 68px;
 }
 
-.tab{
+.tab {
   -webkit-user-drag: none;
 }
 
+.tab-bar > div {
+  position: relative;
+  width: 240px; /* igual que .tab */
+}
+
+.titleTab {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 60;
+  font-family: "titleCard";
+  font-size: 30px;
+  pointer-events: none; /* Evita bloquear el clic */
+  white-space: nowrap;
+}
 /* FIN Tabs*/
 
 /* Cuadro rectangular informativo (Grid + Scroll + Info + Icono)*/

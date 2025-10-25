@@ -5,6 +5,7 @@ import {
   ViewChild,
   HostListener,
 } from '@angular/core';
+import { Bestiary } from '../../models/Bestiary';
 
 @Component({
   selector: 'app-bestiario',
@@ -24,11 +25,11 @@ export class BestiarioComponent implements AfterViewInit {
   selectedTab = 3;
   selectedMonster = 0;
 
-  data: Object[] = [
-    { name: 'Teshitas' },
-    { name: 'Fauna' },
-    { name: 'Mini Bosses' },
-    { name: 'Bosses' },
+  data: Bestiary[] = [
+    { name: 'Teshitas', monsters: [{ name: 'Lancero' }] },
+    { name: 'Fauna', monsters: [{ name: 'Portrait' }] },
+    { name: 'Mini Bosses', monsters: [{ name: 'Squidly Pete' }] },
+    { name: 'Bosses', monsters: [{ name: 'Dekadon' }] },
   ];
 
   selectTab(index: number) {

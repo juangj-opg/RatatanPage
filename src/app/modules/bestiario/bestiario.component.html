@@ -4,6 +4,7 @@
     (click)="selectTab(i)"
     [style]="selectedTab == i ? 'z-index: 50' : ''"
   >
+    <span class="titleTab">{{ tab.name }}</span>
     <img
       [src]="
         selectedTab == i
@@ -14,12 +15,6 @@
       class="tab"
     />
   </div>
-  <!--
-  <img src="/images/frames/tab.png" class="tab" />
-  <img src="/images/frames/tab.png" class="tab" />
-  <img src="/images/frames/tab.png" class="tab" />
-  <img src="/images/frames/selectedTab.png" class="tab selectedTab" /> 
-  -->
 </div>
 
 <div class="banner">
