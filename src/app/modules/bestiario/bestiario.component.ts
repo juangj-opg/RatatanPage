@@ -34,25 +34,33 @@ export class BestiarioComponent implements AfterViewInit {
           name: 'Lancero',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: false,
         },
         {
           name: 'Lancero',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: false,
         },
         {
           name: 'Lancero',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: false,
         },
         {
           name: 'Lancero',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: false,
         },
       ],
     },
@@ -63,19 +71,25 @@ export class BestiarioComponent implements AfterViewInit {
           name: 'Portrait',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: false,
         },
         {
           name: 'Portrait',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: false,
         },
         {
           name: 'Portrait',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: false,
         },
       ],
     },
@@ -84,33 +98,43 @@ export class BestiarioComponent implements AfterViewInit {
       monsters: [
         {
           name: 'Squidly Pete',
-          baseHp: 0,
+          baseHp: 4000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Kit Lasso',
-          baseHp: 0,
+          baseHp: 8500,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Son Jammer',
-          baseHp: 0,
+          baseHp: 20000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Thawner',
-          baseHp: 0,
+          baseHp: 40000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Boneless Bear',
-          baseHp: 0,
+          baseHp: 75000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
       ],
     },
@@ -118,34 +142,92 @@ export class BestiarioComponent implements AfterViewInit {
       name: 'Bosses',
       monsters: [
         {
+          name: 'Dekadon (Tutorial)',
+          baseHp: 24000,
+          srcImgGrid: 'Dekadon.png',
+          srcImgInfo: 'Dekadon.png',
+          description: '',
+          isBoss: true,
+        },
+        {
           name: 'The Jolly Hermit',
-          baseHp: 0,
+          baseHp: 24000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Wagoon',
-          baseHp: 0,
+          baseHp: 40000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Lord Rosham Bo',
-          baseHp: 0,
+          baseHp: 110000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Chillwarden',
-          baseHp: 0,
+          baseHp: 87000,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
         {
           name: 'Flip Flop',
+          baseHp: 150000,
+          srcImgGrid: '',
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
+        },
+        {
+          name: 'The Scorvy Hermit',
           baseHp: 0,
           srcImgGrid: '',
-          srcImgInfo: ''
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
+        },
+        {
+          name: 'Windigoon',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
+        },
+        {
+          name: 'Dekadon',
+          baseHp: 0,
+          srcImgGrid: 'Dekadon.png',
+          srcImgInfo: 'Dekadon.png',
+          description: '',
+          isBoss: true,
+        },
+        {
+          name: 'Charged Dekadon',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
+        },
+        {
+          name: 'Flip Flop (Hard)',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: '',
+          description: '',
+          isBoss: true,
         },
       ],
     },

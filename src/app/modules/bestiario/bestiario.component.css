@@ -154,10 +154,26 @@
   width: 25%;
 }
 
-#gridItems img {
+#gridItems .gridItem {
+  position: relative;
+}
+
+#gridItems .gridFrame {
   width: 100%;
   -webkit-user-drag: none;
   cursor: pointer;
+  z-index: 1;
+}
+
+#gridItems .gridImg {
+  width: 100%;
+  -webkit-user-drag: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 /* Scrollbar */
@@ -299,12 +315,18 @@
 
 /* Contenido del cuadro informátivo */
 
-span#titleMonster {
+span#titleMonster,
+span#lifeMonster {
   font-family: "RatatanInGame";
   font-size: 30px;
   width: 100%;
   text-align: center;
   display: block;
+  margin-bottom: 15px;
+}
+span#lifeMonster{
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 /* FIN Cuadro informativo */

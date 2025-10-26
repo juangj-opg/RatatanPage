@@ -3,4 +3,6 @@ export interface Monster {
   baseHp: number;
   srcImgGrid: string;
   srcImgInfo: string;
+  description: string;
+  isBoss: boolean;
 }
