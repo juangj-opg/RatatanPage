@@ -2,16 +2,16 @@
   <div
     *ngFor="let tab of data; let i = index"
     (click)="selectTab(i)"
-    [style]="selectedTab == i ? 'z-index: 50' : ''"
+    [style]="nSelectedTab == i ? 'z-index: 50' : ''"
   >
     <span class="titleTab">{{ tab.name }}</span>
     <img
       [src]="
-        selectedTab == i
+        nSelectedTab == i
           ? '/images/frames/selectedTab.png'
           : '/images/frames/tab.png'
       "
-      [class]="selectedTab == i ? 'selectedTab' : ''"
+      [class]="nSelectedTab == i ? 'selectedTab' : ''"
       class="tab"
     />
   </div>
@@ -24,9 +24,10 @@
     <div id="realContent">
       <div #gridItems id="gridItems">
         <img
-          *ngFor="let monster of data[selectedTab].monsters"
+          *ngFor="let monster of data[nSelectedTab].monsters; let j = index"
           src="/images/frames/GridItem.png"
           style="z-index: 20"
+          (click)="selectMonster(j)"
         />
       </div>
 
@@ -45,11 +46,10 @@
           <div class="triangle-hack"></div>
         </div>
 
-        <!-- Este va fuera del panel -->
         <div class="info-panel">
           <div class="info-panel__content">
             <div class="panel-header-line"></div>
-            <span id="titleMonster">Dekadon</span>
+            <span id="titleMonster">{{ selectedMonster.name }}</span>
           </div>
         </div>
       </div>

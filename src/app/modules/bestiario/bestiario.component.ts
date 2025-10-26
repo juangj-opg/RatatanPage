@@ -6,6 +6,7 @@ import {
   HostListener,
 } from '@angular/core';
 import { Bestiary } from '../../models/Bestiary';
+import { Monster } from '../../models/Monster';
 
 @Component({
   selector: 'app-bestiario',
@@ -22,59 +23,154 @@ export class BestiarioComponent implements AfterViewInit {
   private startY = 0;
   private startTop = 0;
 
-  selectedTab = 3;
-  selectedMonster = 0;
+  nSelectedTab = 3;
+  nSelectedMonster = 0;
 
   data: Bestiary[] = [
     {
       name: 'Teshitas',
       monsters: [
-        { name: 'Lancero' },
-        { name: 'Lancero' },
-        { name: 'Lancero' },
-        { name: 'Lancero' },
+        {
+          name: 'Lancero',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Lancero',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Lancero',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Lancero',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
       ],
     },
     {
       name: 'Fauna',
       monsters: [
-        { name: 'Portrait' },
-        { name: 'Portrait' },
-        { name: 'Portrait' },
+        {
+          name: 'Portrait',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Portrait',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Portrait',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
       ],
     },
     {
       name: 'Mini Bosses',
       monsters: [
-        { name: 'Squidly Pete' },
-        { name: 'Kit Lasso' },
-        { name: 'Son Jammer' },
-        { name: 'Thawner' },
-        { name: 'Boneless Bear' },
+        {
+          name: 'Squidly Pete',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Kit Lasso',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Son Jammer',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Thawner',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Boneless Bear',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
       ],
     },
     {
       name: 'Bosses',
       monsters: [
-        { name: 'The Jolly Hermit' },
-        { name: 'Wagoon' },
-        { name: 'Lord Rosham Bo' },
-        { name: 'Chillwarden' },
-        { name: 'Flip Flop' },
+        {
+          name: 'The Jolly Hermit',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Wagoon',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Lord Rosham Bo',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Chillwarden',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
+        {
+          name: 'Flip Flop',
+          baseHp: 0,
+          srcImgGrid: '',
+          srcImgInfo: ''
+        },
       ],
     },
   ];
 
+  selectedMonster: Monster =
+    this.data[this.nSelectedTab].monsters[this.nSelectedMonster];
+
   selectTab(index: number) {
-    this.selectedTab = index;
-    this.selectedMonster = 0;
+    this.nSelectedTab = index;
+    this.nSelectedMonster = 0;
+    this.selectedMonster =
+      this.data[this.nSelectedTab].monsters[this.nSelectedMonster];
+  }
+
+  selectMonster(index: number) {
+    this.nSelectedMonster = index;
+    this.selectedMonster =
+      this.data[this.nSelectedTab].monsters[this.nSelectedMonster];
   }
 
   ngAfterViewInit(): void {
     this.updateThumb();
   }
 
-  // Detectar wheel sobre el grid
   @HostListener('wheel', ['$event'])
   onScroll(e: WheelEvent) {
     if (!this.grid) return;
@@ -86,7 +182,6 @@ export class BestiarioComponent implements AfterViewInit {
   onWheel(e: WheelEvent) {
     const target = e.target as HTMLElement;
 
-    // Si la rueda NO está sobre gridItems NI sobre scrollbar — salir
     if (
       !this.grid.nativeElement.contains(target) &&
       !this.bar.nativeElement.contains(target)
