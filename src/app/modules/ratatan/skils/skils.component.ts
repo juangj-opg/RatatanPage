@@ -1128,8 +1128,8 @@ export class SkilsComponent {
           type: 'Wi_Fi',
         },
         {
-          title: '¿¿??',
-          desc: '¿¿??',
+          title: 'Favor del Viento',
+          desc: 'El Cobun recupera PS iguales al 10% de cualquier daño crítico causado. La tienda siempre aparece con 5 ranuras que muestran 1-3 objetos gratis.',
           element: 'Duo',
           rarityLvl: [4],
           variableLvl: [0],
