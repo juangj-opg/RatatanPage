@@ -11,8 +11,8 @@ import { CardSlot } from '../../../models/CardSlot';
   styleUrl: './skils.component.css',
 })
 export class SkilsComponent {
-  selectedRarity = 0;
-  selectedElement = 0;
+  selectedRarity = 4;
+  selectedElement = 6;
   selectedCard: number = 0;
 
   elements: Element[] = [
@@ -22,6 +22,7 @@ export class SkilsComponent {
     { name: 'Veneno', srcImg: 'AttributeIcon_PC006_Poison.png' },
     { name: 'Rayo', srcImg: 'AttributeIcon_PC001_Thunder.png' },
     { name: 'Viento', srcImg: 'AttributeIcon_PC007_Wind.png' },
+    { name: 'Duo', srcImg: 'AttributeIcon_PC007_Wind.png' },
   ];
 
   skills: SkillSlot[] = [
@@ -370,6 +371,71 @@ export class SkilsComponent {
           elementType: 'wind',
           title: 'Ka-ching Crítico',
           srcImg: 'icn_ratacarta07_wind_710m.png',
+        },
+      ],
+    },
+    // Viento
+    {
+      skills: [
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
         },
       ],
     },
@@ -902,6 +968,107 @@ export class SkilsComponent {
         },
       ],
     },
+    {
+      // Duos
+      cards: [
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta01_duo01.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta01_duo02.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo01.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo02.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo01.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo02.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo01.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo02.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo01.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo02.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo01.png',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo02.png',
+        },
+      ]
+    }
   ];
 
 getRarityIndex(card: Card, raritySlot: number) {
