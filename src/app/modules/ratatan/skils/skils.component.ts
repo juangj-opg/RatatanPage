@@ -789,8 +789,8 @@ export class SkilsComponent {
           type: 'Ic_Th',
         },
         {
-          title: '¿¿??',
-          desc: '¿¿??',
+          title: 'Maldición de Hielo',
+          desc: 'Enemigos comunes tienen un 50% de chance de morir al derretirse.\nLos jefes reciben daño igual al 25% de su PS actuales.',
           element: 'Duo',
           rarityLvl: [4],
           variableLvl: [0],
