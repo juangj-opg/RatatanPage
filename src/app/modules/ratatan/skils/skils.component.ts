@@ -11,8 +11,8 @@ import { CardSlot } from '../../../models/CardSlot';
   styleUrl: './skils.component.css',
 })
 export class SkilsComponent {
-  selectedRarity = 4;
-  selectedElement = 6;
+  selectedRarity = 0;
+  selectedElement = 0;
   selectedCard: number = 0;
 
   elements: Element[] = [
