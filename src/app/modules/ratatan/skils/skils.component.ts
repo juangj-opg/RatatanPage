@@ -11,8 +11,8 @@ import { CardSlot } from '../../../models/CardSlot';
   styleUrl: './skils.component.css',
 })
 export class SkilsComponent {
-  selectedRarity = 0;
-  selectedElement = 0;
+  selectedRarity = 4;
+  selectedElement = 6;
   selectedCard: number = 0;
 
   elements: Element[] = [
@@ -22,6 +22,7 @@ export class SkilsComponent {
     { name: 'Veneno', srcImg: 'AttributeIcon_PC006_Poison.png' },
     { name: 'Rayo', srcImg: 'AttributeIcon_PC001_Thunder.png' },
     { name: 'Viento', srcImg: 'AttributeIcon_PC007_Wind.png' },
+    { name: 'Duo', srcImg: 'AttributeIcon_PC007_Wind.png' },
   ];
 
   skills: SkillSlot[] = [
@@ -373,6 +374,71 @@ export class SkilsComponent {
         },
       ],
     },
+    // Viento
+    {
+      skills: [
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          elementType: 'duo',
+          title: '¿¿??',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+      ],
+    },
   ];
 
   cards: CardSlot[] = [
@@ -386,6 +452,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [15, 25, 35, 45],
           srcImg: 'icn_ratacarta01_fire_101.png',
+          type: 'normal',
         },
         {
           title: 'Explosión Flameante+',
@@ -394,6 +461,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [15, 25, 35, 45],
           srcImg: 'icn_ratacarta01_fire_102.png',
+          type: 'normal',
         },
         {
           title: 'Arde sin Cesar',
@@ -402,6 +470,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 20, 30, 40],
           srcImg: 'icn_ratacarta01_fire_103.png',
+          type: 'normal',
         },
         {
           title: 'Fuego del Terror',
@@ -410,6 +479,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [2, 3, 4],
           srcImg: 'icn_ratacarta01_fire_104.png',
+          type: 'normal',
         },
         {
           title: 'Guerrero Osado',
@@ -418,6 +488,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [25, 50, 75, 100],
           srcImg: 'icn_ratacarta01_fire_105.png',
+          type: 'normal',
         },
         {
           title: 'Defensa Brava',
@@ -426,6 +497,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 20, 30, 50],
           srcImg: 'icn_ratacarta01_fire_106.png',
+          type: 'normal',
         },
         {
           title: 'Bola Fuego+',
@@ -434,6 +506,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [50, 100],
           srcImg: 'icn_ratacarta01_fire_107.png',
+          type: 'normal',
         },
         {
           title: 'Fuego Aliado',
@@ -442,6 +515,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [2, 3, 5],
           srcImg: 'icn_ratacarta01_fire_108.png',
+          type: 'normal',
         },
         {
           title: 'Bum Bum',
@@ -450,6 +524,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 20, 30, 50],
           srcImg: 'icn_ratacarta01_fire_109.png',
+          type: 'normal',
         },
         {
           title: 'Sacrificio Honorable',
@@ -458,6 +533,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 20, 30, 50],
           srcImg: 'icn_ratacarta01_fire_110.png',
+          type: 'normal',
         },
         {
           title: 'Muro del coleccionista',
@@ -466,6 +542,25 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [1, 2],
           srcImg: 'icn_ratacarta01_fire_111.png',
+          type: 'normal',
+        },
+        {
+          title: 'Chispa Ígnea',
+          desc: 'Tu Ratatan recupera 10% PS y PM cada 2 segundos mientras los enemigos estén Quemados o Paralizados.',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta01_duo01.png',
+          type: 'Fi_Th',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta01_duo02.png',
+          type: 'Fi_Po',
         },
       ],
     },
@@ -479,6 +574,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [25, 40, 55, 70],
           srcImg: 'icn_ratacarta02_water_201.png',
+          type: 'normal',
         },
         {
           title: 'Chapoteo Especial+',
@@ -487,6 +583,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [25, 40, 55, 70],
           srcImg: 'icn_ratacarta02_water_202.png',
+          type: 'normal',
         },
         {
           title: 'Chapoteo Combo',
@@ -495,6 +592,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [15, 20, 25, 30],
           srcImg: 'icn_ratacarta02_water_203.png',
+          type: 'normal',
         },
         {
           title: 'Barrera Salpicante',
@@ -503,6 +601,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [20, 30, 40],
           srcImg: 'icn_ratacarta02_water_204.png',
+          type: 'normal',
         },
         {
           title: 'Barrera Salpicante+',
@@ -511,6 +610,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 20, 40, 50],
           srcImg: 'icn_ratacarta02_water_205.png',
+          type: 'normal',
         },
         {
           title: 'Chapoteo Primordial',
@@ -519,6 +619,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 20, 30, 50],
           srcImg: 'icn_ratacarta02_water_206.png',
+          type: 'normal',
         },
         {
           title: 'Escudo Torbellino+',
@@ -527,6 +628,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [25, 50],
           srcImg: 'icn_ratacarta02_water_207.png',
+          type: 'normal',
         },
         {
           title: 'Chapoteo Supremo',
@@ -535,6 +637,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [30, 60, 90, 120],
           srcImg: 'icn_ratacarta02_water_208.png',
+          type: 'normal',
         },
         {
           title: 'Salto Marino',
@@ -543,6 +646,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [150, 180, 200],
           srcImg: 'icn_ratacarta02_water_209.png',
+          type: 'normal',
         },
         {
           title: 'Barrera Inflada',
@@ -551,6 +655,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [1, 2],
           srcImg: 'icn_ratacarta02_water_210.png',
+          type: 'normal',
         },
         {
           title: 'Poder del Oasis',
@@ -559,6 +664,25 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [5, 7, 10],
           srcImg: 'icn_ratacarta02_water_211.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo01.png',
+          type: 'Wa_Fi',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo02.png',
+          type: 'Wa_Ic',
         },
       ],
     },
@@ -572,6 +696,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [20, 25, 35, 45],
           srcImg: 'icn_ratacarta03_ice_301.png',
+          type: 'normal',
         },
         {
           title: 'Ventisca Especial+',
@@ -580,6 +705,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [20, 25, 35, 45],
           srcImg: 'icn_ratacarta03_ice_302.png',
+          type: 'normal',
         },
         {
           title: 'Piel Helada',
@@ -588,6 +714,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [40, 60, 80],
           srcImg: 'icn_ratacarta03_ice_303.png',
+          type: 'normal',
         },
         {
           title: 'Golpe Pulverizante',
@@ -596,6 +723,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [500, 1000, 1500],
           srcImg: 'icn_ratacarta03_ice_304.png',
+          type: 'normal',
         },
         {
           title: 'Reto Gélido',
@@ -604,6 +732,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [15, 25, 35, 50],
           srcImg: 'icn_ratacarta03_ice_305.png',
+          type: 'normal',
         },
         {
           title: 'Cura Glacial',
@@ -612,6 +741,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 30, 45, 75],
           srcImg: 'icn_ratacarta03_ice_306.png',
+          type: 'normal',
         },
         {
           title: 'Gran Final',
@@ -620,6 +750,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [75, 60, 50],
           srcImg: 'icn_ratacarta03_ice_307.png',
+          type: 'normal',
         },
         {
           title: 'Furia Gélida',
@@ -628,6 +759,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [75, 100],
           srcImg: 'icn_ratacarta03_ice_308.png',
+          type: 'normal',
         },
         {
           title: 'Entrada Triunfal',
@@ -636,6 +768,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [2, 4],
           srcImg: 'icn_ratacarta03_ice_309.png',
+          type: 'normal',
         },
         {
           title: 'Minueto Macho',
@@ -644,6 +777,25 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [10, 15],
           srcImg: 'icn_ratacarta03_ice_310.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo01.png',
+          type: 'Ic_Th',
+        },
+        {
+          title: 'Maldición de Hielo',
+          desc: 'Enemigos comunes tienen un 50% de chance de morir al derretirse.\nLos jefes reciben daño igual al 25% de su PS actuales.',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo02.png',
+          type: 'Ic_Po',
         },
       ],
     },
@@ -657,6 +809,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [0, 0, 0, 0],
           srcImg: 'icn_ratacarta04_poison_401.png',
+          type: 'normal',
         },
         {
           title: 'Veneno Especial+',
@@ -665,6 +818,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [0, 0, 0, 0],
           srcImg: 'icn_ratacarta04_poison_402.png',
+          type: 'normal',
         },
         {
           title: 'Corrupción Tóxica',
@@ -673,6 +827,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [10, 30, 50],
           srcImg: 'icn_ratacarta04_poison_403.png',
+          type: 'normal',
         },
         {
           title: 'Miasma Tóxico',
@@ -681,6 +836,7 @@ export class SkilsComponent {
           rarityLvl: [3],
           variableLvl: [0],
           srcImg: 'icn_ratacarta04_poison_404.png',
+          type: 'normal',
         },
         {
           title: 'Maldición Tóxica',
@@ -689,6 +845,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [40, 50, 60, 80],
           srcImg: 'icn_ratacarta04_poison_405.png',
+          type: 'normal',
         },
         {
           title: 'Caída Tóxica+',
@@ -697,6 +854,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2],
           variableLvl: [50, 100],
           srcImg: 'icn_ratacarta04_poison_406.png',
+          type: 'normal',
         },
         {
           title: 'Polución',
@@ -705,6 +863,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [75, 100],
           srcImg: 'icn_ratacarta04_poison_407.png',
+          type: 'normal',
         },
         {
           title: 'Picadura Venenosa',
@@ -713,6 +872,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2],
           variableLvl: [20, 25, 30],
           srcImg: 'icn_ratacarta04_poison_408.png',
+          type: 'normal',
         },
         {
           title: 'Colector',
@@ -721,6 +881,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [1, 2],
           srcImg: 'icn_ratacarta04_poison_409.png',
+          type: 'normal',
         },
         {
           title: 'Aniquila Jefes',
@@ -729,6 +890,25 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 15, 20, 25],
           srcImg: 'icn_ratacarta04_poison_410.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo01.png',
+          type: 'Po_Wi',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo02.png',
+          type: 'Po_Wa',
         },
       ],
     },
@@ -742,6 +922,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [0, 0, 0, 0],
           srcImg: 'icn_ratacarta05_thunder_501.png',
+          type: 'normal',
         },
         {
           title: 'Golpe Eléctrico Especial+',
@@ -750,6 +931,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [0, 0, 0, 0],
           srcImg: 'icn_ratacarta05_thunder_502.png',
+          type: 'normal',
         },
         {
           title: 'Choque Estático',
@@ -758,6 +940,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [25, 50, 100],
           srcImg: 'icn_ratacarta05_thunder_503.png',
+          type: 'normal',
         },
         {
           title: 'Bondad del Trueno',
@@ -766,6 +949,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [15, 33, 50],
           srcImg: 'icn_ratacarta05_thunder_504.png',
+          type: 'normal',
         },
         {
           title: 'Electrocuperación',
@@ -774,6 +958,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [1, 2, 3, 5],
           srcImg: 'icn_ratacarta05_thunder_505.png',
+          type: 'normal',
         },
         {
           title: 'Amplificador',
@@ -782,6 +967,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [20, 30, 50, 75],
           srcImg: 'icn_ratacarta05_thunder_506.png',
+          type: 'normal',
         },
         {
           title: 'Carga Relámpago+',
@@ -790,6 +976,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [50, 100],
           srcImg: 'icn_ratacarta05_thunder_507.png',
+          type: 'normal',
         },
         {
           title: 'Electrificación',
@@ -798,6 +985,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [1, 2],
           srcImg: 'icn_ratacarta05_thunder_508.png',
+          type: 'normal',
         },
         {
           title: 'Vals Mágico',
@@ -806,6 +994,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [3, 5],
           srcImg: 'icn_ratacarta05_thunder_509.png',
+          type: 'normal',
         },
         {
           title: 'Autocarga',
@@ -814,6 +1003,25 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [4, 3, 1.5],
           srcImg: 'icn_ratacarta05_thunder_510.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo01.png',
+          type: 'Th_Wa',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo02.png',
+          type: 'Th_Wi',
         },
       ],
     },
@@ -827,6 +1035,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [40, 50, 60, 70],
           srcImg: 'icn_ratacarta07_wind_701.png',
+          type: 'normal',
         },
         {
           title: 'Golpe Remolino Especial+',
@@ -835,6 +1044,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [40, 50, 60, 70],
           srcImg: 'icn_ratacarta07_wind_702.png',
+          type: 'normal',
         },
         {
           title: 'Huracán Infernal',
@@ -843,6 +1053,7 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [50, 75, 100],
           srcImg: 'icn_ratacarta07_wind_703.png',
+          type: 'normal',
         },
         {
           title: 'Huracán Demoníaco',
@@ -851,6 +1062,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [50, 100, 150, 200],
           srcImg: 'icn_ratacarta07_wind_704.png',
+          type: 'normal',
         },
         {
           title: 'Combo Huracán',
@@ -859,6 +1071,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [30, 60, 90, 120],
           srcImg: 'icn_ratacarta07_wind_705.png',
+          type: 'normal',
         },
         {
           title: 'Tornado Demoledor+',
@@ -867,6 +1080,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [1, 2],
           srcImg: 'icn_ratacarta07_wind_706.png',
+          type: 'normal',
         },
         {
           title: 'Mega Vendaval',
@@ -875,6 +1089,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [50, 100, 150, 200],
           srcImg: 'icn_ratacarta07_wind_707.png',
+          type: 'normal',
         },
         {
           title: 'Destructor de Jefes',
@@ -883,6 +1098,7 @@ export class SkilsComponent {
           rarityLvl: [2, 3],
           variableLvl: [5, 10],
           srcImg: 'icn_ratacarta07_wind_708.png',
+          type: 'normal',
         },
         {
           title: 'Reembolso de la Suerte',
@@ -891,6 +1107,7 @@ export class SkilsComponent {
           rarityLvl: [0, 1, 2, 3],
           variableLvl: [10, 20, 30, 50],
           srcImg: 'icn_ratacarta07_wind_709.png',
+          type: 'normal',
         },
         {
           title: 'Ka-ching Crítico',
@@ -899,20 +1116,151 @@ export class SkilsComponent {
           rarityLvl: [1, 2, 3],
           variableLvl: [5, 7, 10],
           srcImg: 'icn_ratacarta07_wind_710.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo01.png',
+          type: 'Wi_Fi',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo02.png',
+          type: 'Wi_Ic',
+        },
+      ],
+    },
+    {
+      // Duos
+      cards: [
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta01_duo01.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta01_duo02.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo01.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo02.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo01.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo02.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo01.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo02.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo01.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo02.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo01.png',
+          type: 'normal',
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo02.png',
+          type: 'normal',
         },
       ],
     },
   ];
 
-getRarityIndex(card: Card, raritySlot: number) {
-  let findIndex = card.rarityLvl.findIndex((r) => r == raritySlot);
+  getRarityIndex(card: Card, raritySlot: number) {
+    let findIndex = card.rarityLvl.findIndex((r) => r == raritySlot);
 
-  if (findIndex >= 0) return findIndex;
-  if (raritySlot > Math.max(...card.rarityLvl))
-    return card.rarityLvl.indexOf(Math.max(...card.rarityLvl));
-  return 0;
-}
-
+    if (findIndex >= 0) return findIndex;
+    if (raritySlot > Math.max(...card.rarityLvl))
+      return card.rarityLvl.indexOf(Math.max(...card.rarityLvl));
+    return 0;
+  }
 
   selectSkill(skill: Skill) {
     let findIndex = this.cards[this.selectedElement].cards.findIndex(

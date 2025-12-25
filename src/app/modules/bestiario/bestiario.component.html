@@ -1,25 +1,89 @@
+<div class="tab-bar">
+  <div
+    *ngFor="let tab of data; let i = index"
+    (click)="selectTab(i)"
+    [style]="nSelectedTab == i ? 'z-index: 50' : ''"
+  >
+    <span class="titleTab">{{ tab.name }}</span>
+    <img
+      [src]="
+        nSelectedTab == i
+          ? '/images/frames/selectedTab.png'
+          : '/images/frames/tab.png'
+      "
+      [class]="nSelectedTab == i ? 'selectedTab' : ''"
+      class="tab"
+    />
+  </div>
+</div>
+
 <div class="banner">
   <div class="line-top"></div>
 
   <div class="content">
     <div id="realContent">
       <div #gridItems id="gridItems">
-        <img
-          src="/images/frames/GridItem.png"
-          style="z-index: 20"
-          *ngFor="let _ of [].constructor(20)"
-        />
+        <div
+          class="gridItem"
+          *ngFor="let monster of data[nSelectedTab].monsters; let j = index"
+          (click)="selectMonster(j)"
+        >
+          <img src="/images/frames/GridItem.png" class="gridFrame" />
+
+          <img
+            [src]="
+              '/images/monsters/' +
+              (monster.srcImgGrid === '' ? 'notFound.gif' : monster.srcImgGrid)
+            "
+            class="gridImg"
+          />
+        </div>
       </div>
 
-      <div #scrollBar class="scrollbar">
-        <div
-          #scrollThumb
-          class="scroll-thumb"
-          (mousedown)="onThumbMouseDown($event)"
-        ></div>
+      <div class="scroll-wrapper">
+        <div #scrollBar class="scrollbar">
+          <div
+            #scrollThumb
+            class="scroll-thumb"
+            (mousedown)="onThumbMouseDown($event)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="info-wrapper">
+        <div class="triangle-glow-wrapper">
+          <div class="triangle-hack"></div>
+        </div>
+
+        <div class="info-panel">
+          <div class="info-panel__content">
+            <div class="panel-header-line"></div>
+            <span id="titleMonster">{{ selectedMonster.name }} </span>
+            <span id="lifeMonster"
+              >{{ selectedMonster.baseHp.toLocaleString("es-ES") }} HP</span
+            >
+            <div id="imgMonster" style="text-align: center">
+              <img
+                [src]="
+                  '/images/monsters/' +
+                  (selectedMonster.srcImgGrid === ''
+                    ? 'notFound.gif'
+                    : selectedMonster.srcImgGrid)
+                "
+                width="250px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="iconDesplegable"
+        onclick="document.getElementById('mySidenav').style.left = '0%';"
+      >
+        <img src="/images/frames/options.png" />
       </div>
     </div>
   </div>
-
   <div class="line-bottom"></div>
 </div>

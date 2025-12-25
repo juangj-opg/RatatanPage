@@ -11,6 +11,7 @@ div#cabecera {
   position: absolute;
   top: 0;
   width: 400px;
+  pointer-events: none;
 }
 
 #imgHUDAtras {
@@ -19,6 +20,7 @@ div#cabecera {
   position: absolute;
   top: 0;
   width: 228px;
+  cursor: pointer;
 }
 
 #spanHUDAtras {
