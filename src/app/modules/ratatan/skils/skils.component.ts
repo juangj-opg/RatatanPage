@@ -22,7 +22,6 @@ export class SkilsComponent {
     { name: 'Veneno', srcImg: 'AttributeIcon_PC006_Poison.png' },
     { name: 'Rayo', srcImg: 'AttributeIcon_PC001_Thunder.png' },
     { name: 'Viento', srcImg: 'AttributeIcon_PC007_Wind.png' },
-    { name: 'Duo', srcImg: 'AttributeIcon_PC007_Wind.png' },
   ];
 
   skills: SkillSlot[] = [
@@ -84,6 +83,16 @@ export class SkilsComponent {
           elementType: 'fire',
           srcImg: 'icn_ratacarta01_fire_111m.png',
         },
+        {
+          title: 'Chispa Ígnea',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta01_duo01m.png',
+        },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta01_duo02m.png',
+        },
       ],
     },
     // Agua
@@ -143,6 +152,16 @@ export class SkilsComponent {
           title: 'Poder del Oasis',
           elementType: 'water',
           srcImg: 'icn_ratacarta02_water_211m.png',
+        },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta02_duo01m.png',
+        },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta02_duo02m.png',
         },
       ],
     },
@@ -207,6 +226,16 @@ export class SkilsComponent {
           elementType: 'ice',
           srcImg: 'icn_ratacarta03_ice_310m.png',
         },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta03_duo01m.png',
+        },
+        {
+          title: 'Maldición de Hielo',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta03_duo02m.png',
+        },
       ],
     },
     // Veneno
@@ -261,6 +290,16 @@ export class SkilsComponent {
           title: 'Aniquila Jefes',
           elementType: 'poison',
           srcImg: 'icn_ratacarta04_poison_410m.png',
+        },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta04_duo01m.png',
+        },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta04_duo02m.png',
         },
       ],
     },
@@ -317,6 +356,16 @@ export class SkilsComponent {
           title: 'Autocarga',
           srcImg: 'icn_ratacarta05_thunder_510m.png',
         },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta05_duo01m.png',
+        },
+        {
+          title: '¿¿??',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta05_duo02m.png',
+        },
       ],
     },
     // Viento
@@ -372,70 +421,15 @@ export class SkilsComponent {
           title: 'Ka-ching Crítico',
           srcImg: 'icn_ratacarta07_wind_710m.png',
         },
-      ],
-    },
-    // Viento
-    {
-      skills: [
         {
-          elementType: 'duo',
           title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
+          elementType: 'duo',
+          srcImg: 'icn_ratacarta06_duo01m.png',
         },
         {
+          title: 'Favor del Viento',
           elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
-        },
-        {
-          elementType: 'duo',
-          title: '¿¿??',
-          srcImg: 'icn_ratacarta01_duo01m.png',
+          srcImg: 'icn_ratacarta06_duo02m.png',
         },
       ],
     },
