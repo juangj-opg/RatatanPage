@@ -5,5 +5,6 @@ export interface Card{
     rarityLvl: number[];
     variableLvl: number[];
     srcImg: string;
+    type: string;
     
 }

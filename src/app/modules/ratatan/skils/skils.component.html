@@ -20,7 +20,7 @@
       class="frame"
     />
     <img
-      src="/images/frames/RatakarutaCardFrame_{{ card.element }}.png"
+      src="/images/frames/RatakarutaCard{{ card.type != 'normal' ? 'Duo' : '' }}Frame_{{ card.type == 'normal' ? card.element : card.type }}.png"
       class="overlay"
     />
     <div class="skill-container">
