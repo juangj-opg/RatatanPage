@@ -666,6 +666,24 @@ export class SkilsComponent {
           srcImg: 'icn_ratacarta02_water_211.png',
           type: 'normal'
         },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo01.png',
+          type: 'Wa_Fi'
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta02_duo02.png',
+          type: 'Wa_Ic'
+        },
       ],
     },
     {
@@ -760,6 +778,24 @@ export class SkilsComponent {
           variableLvl: [10, 15],
           srcImg: 'icn_ratacarta03_ice_310.png',
           type: 'normal'
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo01.png',
+          type: 'Ic_Th'
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta03_duo02.png',
+          type: 'Ic_Po'
         },
       ],
     },
@@ -856,6 +892,24 @@ export class SkilsComponent {
           srcImg: 'icn_ratacarta04_poison_410.png',
           type: 'normal'
         },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo01.png',
+          type: 'Po_Wi'
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta04_duo02.png',
+          type: 'Po_Wa'
+        },
       ],
     },
     {
@@ -951,6 +1005,24 @@ export class SkilsComponent {
           srcImg: 'icn_ratacarta05_thunder_510.png',
           type: 'normal'
         },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo01.png',
+          type: 'Th_Wa'
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta05_duo02.png',
+          type: 'Th_Wi'
+        },
       ],
     },
     {
@@ -1045,6 +1117,24 @@ export class SkilsComponent {
           variableLvl: [5, 7, 10],
           srcImg: 'icn_ratacarta07_wind_710.png',
           type: 'normal'
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo01.png',
+          type: 'Wi_Fi'
+        },
+        {
+          title: '¿¿??',
+          desc: '¿¿??',
+          element: 'Duo',
+          rarityLvl: [4],
+          variableLvl: [0],
+          srcImg: 'icn_ratacarta06_duo02.png',
+          type: 'Wi_Ic',
         },
       ],
     },
