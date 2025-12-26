@@ -60,9 +60,13 @@
       class="frame"
     />
     <img
-      src="/images/frames/RatakarutaCardFrame_{{
-        cards[selectedElement].cards[selectedCard].element
-      }}.png"
+      [src]="'/images/frames/RatakarutaCard' +
+    (cards[selectedElement].cards[selectedCard].type !== 'normal' ? 'Duo' : '') +
+    'Frame_' +
+    (cards[selectedElement].cards[selectedCard].type === 'normal'
+      ? cards[selectedElement].cards[selectedCard].element
+      : cards[selectedElement].cards[selectedCard].type) +
+    '.png'"
       class="overlay"
     />
     <div class="skill-container">
