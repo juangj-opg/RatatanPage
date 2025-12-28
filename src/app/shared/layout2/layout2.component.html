@@ -1,16 +1,16 @@
 <div id="contentDiv">
   <div id="cabecera">
     <div id="contentCabecera">
-      <img src="/images/background/hudEsquina.png" alt="" id="imgHUDEsquina" />
+      <img [src]="imgHUD" alt="" id="imgHUDEsquina" />
       <div (click)="backPage()">
         <img src="/images/background/hudAtras.png" alt="" id="imgHUDAtras" />
         <span id="spanHUDAtras">ATRÁS</span>
       </div>
-      <span id="spanHUDTitle"> BESTIARIO </span>
+      <span [id]="'spanHUDTitle'+titleText">{{titleText}}</span>
     </div>
   </div>
 
-  <div id="contentPage">
+  <div id="contentPage" [ngClass]="{'bestiario': esBestiario, 'formacion': esFormacion}">
     <div id="content">
       <router-outlet style="display: none"></router-outlet>
     </div>

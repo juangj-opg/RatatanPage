@@ -35,7 +35,7 @@ div#cabecera {
   left: 74px;
 }
 
-#spanHUDTitle {
+#spanHUDTitleBESTIARIO {
   user-select: none;
   z-index: 12;
   color: white;
@@ -47,6 +47,18 @@ div#cabecera {
   left: 80px;
 }
 
+#spanHUDTitleFORMACION {
+  user-select: none;
+  z-index: 12;
+  color: white;
+  position: absolute;
+  font-family: "titleCard";
+  rotate: -45deg;
+  font-size: 58px;
+  top: 130px;
+  left: 70px;
+}
+
 /* Fin Cabecera*/
 
 /* Contenido */
@@ -54,13 +66,20 @@ div#cabecera {
 div#contentPage {
   position: relative;
   width: 100%;
-  background-image: url("/images/background/background1.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: normal;
   overflow: hidden;
+}
+
+div.bestiario{
+  background-image: url("/images/background/background1.png"); 
+}
+
+div.formacion{
+  background-image: url("/images/background/background2.png"); 
 }
 
 div#contentPage::before {
