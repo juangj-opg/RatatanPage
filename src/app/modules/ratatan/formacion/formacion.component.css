@@ -8,7 +8,7 @@ div#characters > div {
 
 div#characters > div:last-child {
   padding-left: 3%;
-  margin-right: -15%
+  margin-right: -15%;
 }
 
 div#characters {
@@ -19,4 +19,35 @@ div#characters {
 .frame {
   width: 100%;
   opacity: 0.8;
+  -webkit-user-drag: none;
+}
+
+#squad1,
+#squad2,
+#squad3 {
+  display: flex;
+  width: 42%;
+  padding-left: 4%;
+}
+
+.cobun {
+  width: 33.33%;
+}
+
+.base-circle {
+  position: absolute;
+  bottom: 10px;
+
+  width: 60px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 10;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.95) 55%,
+    rgba(50, 50, 50, 0.9) 56%,
+    rgba(40, 40, 40, 0.9) 100%
+  );
 }
