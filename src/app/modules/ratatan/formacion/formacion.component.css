@@ -1,0 +1,22 @@
+div#characters {
+  display: flex;
+}
+
+div#characters > div {
+  margin-right: -22%;
+}
+
+div#characters > div:last-child {
+  padding-left: 3%;
+  margin-right: -15%
+}
+
+div#characters {
+  width: 67%;
+  padding-left: 300px;
+}
+
+.frame {
+  width: 100%;
+  opacity: 0.8;
+}
